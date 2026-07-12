@@ -88,63 +88,7 @@ export default function AboutContent() {
                   className="w-full object-cover"
                 />
 
-                {/* Floating Bottom Card */}
-                {/* Floating Bottom Card */}
-                <div className="absolute bottom-2 left-1/2 w-[92%] -translate-x-1/2 rounded-2xl border border-orange-100 bg-white shadow-xl">
-
-                  {/* Mobile */}
-                  <div className="flex items-center justify-around px-2 py-2 lg:hidden">
-
-                    <div className="flex items-center justify-center gap-2">
-                      <Car size={14} className="text-orange-500" />
-                        <span className="font-bold text-sm sm:text-base text-slate-600 mb-2">
-                        Rent Vehicle
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-center gap-2">
-                      <CalendarDays size={14} className="text-orange-500" />
-                        <span className="font-bold text-sm sm:text-base text-slate-600 mb-2">
-                        Choose Plan
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-center gap-2">
-                      <Store size={14} className="text-orange-500" />
-                        <span className="font-bold text-sm sm:text-base text-slate-600 mb-2">
-                        Earn
-                      </span>
-                    </div>
-
-                  </div>
-
-                  {/* Desktop */}
-                  <div className="hidden lg:grid lg:grid-cols-3">
-
-                    <div className="flex items-center justify-center gap-2 p-3">
-                      <Car size={20} className="text-orange-500" />
-                       <span className="font-bold text-sm sm:text-base text-slate-600 mb-2">
-                        Rent Your Vehicle
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-center gap-2 border-x border-orange-100 p-3">
-                      <CalendarDays size={20} className="text-orange-500" />
-                      <span className="text-sm font-semibold text-[#29566A]">
-                        Choose Your Plan
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-center gap-2 p-3">
-                      <Store size={20} className="text-orange-500" />
-                      <span className="text-sm font-semibold text-[#29566A]">
-                        Earn with Swarikaro
-                      </span>
-                    </div>
-
-                  </div>
-
-                </div>
+             
 
               </div>
               <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -418,7 +362,7 @@ export default function AboutContent() {
             <div className="group overflow-hidden rounded-[20px] border border-orange-100 bg-[#FFF8F1] shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
               <Image
-                src="/about/what_about_1.webp"
+                src="/about/about_1.webp"
                 alt="Vehicle Owners"
                 width={600}
                 height={400}
@@ -449,7 +393,7 @@ export default function AboutContent() {
             <div className="group overflow-hidden rounded-[28px] border border-orange-100 bg-[#FFF8F1] shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
               <Image
-                src="/about/what_about_2.webp"
+                src="/about/about_2.webp"
                 alt="Rental Shops"
                 width={600}
                 height={400}
@@ -479,7 +423,7 @@ export default function AboutContent() {
             <div className="group overflow-hidden rounded-[28px] border border-orange-100 bg-[#FFF8F1] shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
               <Image
-                src="/about/what_about_3.webp"
+                src="/about/about_3.webp"
                 alt="Customers"
                 width={600}
                 height={400}

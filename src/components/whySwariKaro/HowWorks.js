@@ -64,7 +64,7 @@ export function HowItWorks() {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 className="relative"
               >
-                <div className="bg-card rounded-2xl p-5 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border h-full min-h-[260px] relative">
+                <div className="bg-card rounded-2xl p-5 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border relative h-auto sm:min-h-[220px] lg:min-h-[260px]">
                   {/* Step number badge */}
                  
 
@@ -92,21 +92,7 @@ export function HowItWorks() {
                 </div>
 
                 {/* Arrow connector for mobile/tablet */}
-                {index < steps.length - 1 && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.15 + 0.5 }}
-                    className="lg:hidden flex justify-center my-4"
-                  >
-                    <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: 'var(--primary)' }}>
-                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                      </svg>
-                    </div>
-                  </motion.div>
-                )}
+               
               </motion.div>
             ))}
           </div>
