@@ -1,0 +1,494 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdfdfd;
+  --foreground:  #29566A;
+
+  /* Swarikaro Premium Theme */
+  --primary: #f97316;
+  --primary-dark: #ea580c;
+
+  --secondary: #29566A;
+  --secondary-dark: #2a1d0f;
+
+  --accent: #fbbf24;
+
+   --section-bg: #FCF7F2;
+
+
+  --border: #eadfce;
+  --card: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+
+  --color-secondary: var(--secondary);
+  --color-card: var(--card);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+
+
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-dark)
+  );
+  color: white;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: white;
+  color: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(249, 115, 22, 0.12);
+}
+
+
+
+/* Navbar */
+.navbar {
+  background: rgba(236, 222, 202, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e6d7c1;
+}
+
+.nav-link {
+  color: #082f49;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f97316;
+}
+
+/* Footer */
+.footer-bg {
+  background: linear-gradient(
+    135deg,
+    #082f49,
+    #0f172a
+  );
+  color: white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f97316;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
+
+@keyframes roadMove{
+  from{
+    background-position:0 0;
+  }
+  to{
+    background-position:-72px 0;
+  }
+}
+
+@keyframes floatSlow{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-25px);
+  }
+}
+
+.animate-float{
+  animation:floatSlow 8s ease-in-out infinite;
+}
+
+/* ==============================
+   PREMIUM HERO BACKGROUND
+============================== */
+
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(249,115,22,.14), transparent 34%),
+    radial-gradient(circle at 88% 14%, rgba(41,86,106,.12), transparent 32%),
+    radial-gradient(circle at 85% 82%, rgba(251,191,36,.10), transparent 28%),
+    linear-gradient(
+      180deg,
+      #fffdfb 0%,
+      #fff8f2 45%,
+      #fcf7f2 100%
+    );
+}
+
+.hero-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(rgba(41,86,106,.06) 1px,transparent 1px);
+  background-size:32px 32px;
+  opacity:.35;
+  pointer-events:none;
+}
+
+
+
+
+.hero-blob{
+  position:absolute;
+  border-radius:9999px;
+  filter:blur(90px);
+  opacity:.35;
+  pointer-events:none;
+}
+
+.hero-blob.orange{
+  width:360px;
+  height:360px;
+  background:#f97316;
+  top:-120px;
+  right:-120px;
+  animation:floatSlow 10s ease-in-out infinite;
+}
+
+.hero-blob.blue{
+  width:320px;
+  height:320px;
+  background:#29566A;
+  bottom:-120px;
+  left:-100px;
+  animation:floatSlow 12s ease-in-out infinite reverse;
+}
+.hero-road{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:110px;
+  background:linear-gradient(to bottom,#f8f4ee,#ece1d2);
+}
+
+.hero-road::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:50%;
+  height:4px;
+  transform:translateY(-50%);
+  background:repeating-linear-gradient(
+    90deg,
+    #fff 0 35px,
+    transparent 35px 70px
+  );
+  animation:roadMove 1.4s linear infinite;
+}
+
+
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .logo-glow::before {
+    animation: none;
+    opacity: 0.5;
+  }
+
+  .navbar-bike {
+    animation: none;
+  }
+
+  .animate-float {
+    animation: none;
+  }
+}
+.hero-wrapper{
+    min-height:700px;
+    display:grid;
+    align-items:center;
+    padding:40px 5vw 60px;
+}
+
+/* Laptop */
+@media (max-height:850px){
+    .hero-wrapper{
+        min-height:620px;
+        padding-top:20px;
+        padding-bottom:40px;
+        align-items:start;
+    }
+}
+
+/* Desktop */
+@media (min-height:851px) and (max-height:1080px){
+    .hero-wrapper{
+        min-height:760px;
+        padding-top:40px;
+        padding-bottom:40px;
+        align-items:center;
+    }
+}
+
+/* 2K / 4K */
+/* 2K / 4K */
+@media (min-width: 2560px) {
+  .hero-wrapper {
+    min-height: 780px;   /* 100vh mat use karo */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+  }
+}
+
+/* ===== Core Services Support ===== */
+
+:root{
+  --brand:#f97316;
+  --brand-soft:#fff1e0;
+}
+
+.text-gradient-brand{
+  background:linear-gradient(135deg,#fb923c,#f97316,#ea580c);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.bg-gradient-brand{
+  background:linear-gradient(135deg,#fb923c,#f97316,#ea580c);
+}
+
+.bg-hero{
+  background:
+    radial-gradient(circle at 12% 18%, rgba(249,115,22,.12), transparent 34%),
+    radial-gradient(circle at 88% 14%, rgba(41,86,106,.10), transparent 32%),
+    radial-gradient(circle at 80% 82%, rgba(251,191,36,.08), transparent 28%),
+    linear-gradient(
+      180deg,
+      #fffdfb 0%,
+      #fff8f2 45%,
+      #fcf7f2 100%
+    );
+}
+
+
+.shadow-card{
+  box-shadow:0 18px 40px -20px rgba(15,38,52,.18);
+}
+
+.shadow-soft{
+  box-shadow:0 8px 20px -10px rgba(15,38,52,.12);
+}
+
+.shadow-premium{
+  box-shadow:0 30px 60px -25px rgba(249,115,22,.28);
+}
+
+/* Ultra Wide / Projector  for partner section*/
+/* Ultra Wide / Projector */
+@media (min-width: 1800px) {
+  .hero-content {
+    transform: translateX(-70px);
+  }
+
+
+  .hero-content {
+    max-width: 760px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero-content .flex {
+    justify-content: center !important;
+  }
+}
+/* ---------- Splash ---------- */
+
+.splash-screen{
+position:fixed;
+inset:0;
+z-index:999999;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+background:#fff;
+}
+
+.splash-bg{
+position:absolute;
+inset:0;
+
+background:
+radial-gradient(circle at 15% 20%,rgba(249,115,22,.10),transparent 35%),
+radial-gradient(circle at 85% 15%,rgba(41,86,106,.08),transparent 35%),
+radial-gradient(circle at 80% 90%,rgba(249,115,22,.08),transparent 30%),
+linear-gradient(180deg,#fffdfb,#fff8f2,#fcf7f2);
+}
+
+.splash-content{
+position:relative;
+z-index:2;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.logo-wrapper{
+animation:zoomLogo .8s ease;
+}
+
+.splash-logo{
+width:460px;
+height:auto;
+animation:floatLogo 3s ease-in-out infinite;
+}
+
+.splash-texts{
+margin-top:28px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:6px;
+min-height:120px;
+}
+
+.splash-line{
+font-size:17px;
+font-weight:500;
+color:#29566A;
+opacity:0;
+transform:translateY(18px);
+transition:.5s;
+letter-spacing:.3px;
+text-align:center;
+}
+
+.show-line{
+opacity:1;
+transform:translateY(0);
+}
+
+.loader{
+margin-top:2px;
+width:240px;
+height:6px;
+background:#ececec;
+border-radius:999px;
+overflow:hidden;
+}
+
+.loader-fill{
+height:100%;
+background:linear-gradient(90deg,#fb923c,#f97316,#ea580c);
+animation:loadBar 3s linear forwards;
+transform-origin:left;
+}
+
+@keyframes loadBar{
+from{transform:scaleX(0);}
+to{transform:scaleX(1);}
+}
+
+@keyframes zoomLogo{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+@keyframes floatLogo{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-8px);
+}
+}
+
+@media(max-width:768px){
+
+.splash-logo{
+width:280px;
+}
+
+.splash-line{
+font-size:14px;
+padding:0 20px;
+}
+
+.loader{
+width:180px;
+}
+
+}
