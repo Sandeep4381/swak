@@ -1,9 +1,9 @@
 "use client";
 
-import { Clock3, Smartphone, X, Bell } from "lucide-react";
+import { Bell, Clock3, Smartphone, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { createPortal } from "react-dom";
+import { PartnerInterestForm } from "@/components/whySwariKaro/form_partner";
 import UserForm from "./userfrom";
 
 const popupContent = {
@@ -34,9 +34,9 @@ export default function ComingSoonButton({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [showPartnerForm, setShowPartnerForm] = useState(false);
   const [preferForm, setPreferForm] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const router = useRouter();
   const content = popupContent[variant] ?? popupContent.user;
 
   useEffect(() => setMounted(true), []);
@@ -86,6 +86,7 @@ export default function ComingSoonButton({
               }}
               className="absolute inset-0 bg-black/55 backdrop-blur-sm"
             />
+            
 
             <div className="relative w-full max-w-md md:max-w-lg overflow-hidden rounded-2xl bg-white text-center shadow-2xl">
               <div className={`h-1.5 w-full ${content.accent}`} />
@@ -146,21 +147,34 @@ export default function ComingSoonButton({
                       </button>
                     )
                   ) : (
-                    <button
-                      type="button"
-                      onClick={() => router.push('/partner')}
-                      className={`mt-4 inline-flex h-11 w-full items-center justify-center rounded-full px-6 text-sm font-extrabold text-white transition hover:opacity-90 ${content.accent}`}
-                    >
-                      <Bell className="h-4 w-4 mr-2" />
-                      Notify Me
-                    </button>
+                 <button
+  type="button"
+  onClick={() => {
+    setIsOpen(false);        // Coming Soon popup close
+    setShowPartnerForm(true); // Partner form open
+  }}
+  className={`mt-4 inline-flex h-11 w-full items-center justify-center rounded-full px-6 text-sm font-extrabold text-white transition hover:opacity-90 ${content.accent}`}
+>
+  <Bell className="h-4 w-4 mr-2" />
+  Notify Me
+</button>
                   )}
                 </div>
+                
               </div>
+              
             </div>
           </div>,
           document.body,
         )}
+        {mounted && showPartnerForm &&
+          createPortal(
+            <PartnerInterestForm
+              onClose={() => setShowPartnerForm(false)}
+            />,
+            document.body,
+          )}
+        
     </>
   );
 }

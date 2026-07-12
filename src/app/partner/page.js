@@ -75,7 +75,7 @@ export default function App() {
       <JsonLd data={[breadcrumbSchema, serviceSchema]} />
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Hero />
-        <PartnerInterestForm />
+        <PartnerInterestForm modal={false} />
         <WhyPartner />
         <HowItWorks />
         <Benefits />

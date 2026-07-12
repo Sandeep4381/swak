@@ -1,7 +1,9 @@
 "use client";
 
+import { PartnerInterestForm } from "@/components/whySwariKaro/form_partner";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+
 import { MapPin, ChevronRight, Menu, X, ArrowRight, Navigation, Clock, Users, Car, Download } from "lucide-react";
 import ComingSoonButton from "./ui/comingsoon";
 
@@ -38,6 +40,7 @@ export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
   const [phoneImg, setPhoneImg] = useState(0);
+  const [showPartnerForm, setShowPartnerForm] = useState(false);
 
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 20);
@@ -160,17 +163,16 @@ export default function App() {
                 <Download className="w-4 h-4" />
                 Download App
               </ComingSoonButton>
-             <Link href="partner" aria-label="Swarikaro partner" className="flex items-center">
+            
+               <button
+  onClick={() => setShowPartnerForm(true)}
+  className="flex items-center justify-center gap-2 h-12 w-[195px] px-6 rounded-xl font-bold text-sm bg-white text-[#29566A] border border-[#29566A] shadow-sm transition-all hover:scale-105 active:scale-95"
+>
+  <Users className="w-4 h-4" />
+  Become a Partner
+</button>
 
-                <button className="flex items-center justify-center gap-2 h-12 w-[195px] px-6 rounded-xl font-bold text-sm bg-white text-[#29566A] border border-[#29566A] shadow-sm transition-all hover:scale-105 active:scale-95">
-
-                  <Users className="w-4 h-4" />
-
-                  Become a Partner
-
-                </button>
-
-              </Link>
+           
 
             </div>
 
@@ -458,7 +460,11 @@ export default function App() {
               </div>
             </div>
           </div>
-
+{showPartnerForm && (
+  <PartnerInterestForm
+    onClose={() => setShowPartnerForm(false)}
+  />
+)}
         </div>
       </section>
 

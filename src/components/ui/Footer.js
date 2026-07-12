@@ -108,9 +108,9 @@ function AppCard({ title, tone = "user" }) {
       <div className="min-w-[82px]">
         
         <h4 className="text-lg font-bold leading-tight text-white sm:text-xl lg:text-2xl">
-          <span className={tone === "partner" ? "text-orange-400" : ""}>
+          
             {title}
-          </span>
+          
         </h4>
       </div>
 
@@ -326,8 +326,17 @@ Maharashtra, 421201
         </div>
 
         <div className="mt-4 border-t border-white/[0.08] pt-6">
-         <p className="text-center text-sm font-semibold text-white/60">
-  &copy; 2026 Mystrymind Innovations Private Limited. All rights reserved.
+        <p className="text-center text-sm font-semibold text-white/60">
+  &copy; 2026{" "}
+  <Link
+    href="https://mystrymind.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition hover:text-white hover:underline"
+  >
+    Mystrymind Innovations Private Limited
+  </Link>{" "}
+  All rights reserved.
 </p>
         </div>
       </div>

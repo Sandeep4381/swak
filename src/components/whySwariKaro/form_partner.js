@@ -11,6 +11,8 @@ import {
   User,
   X,
 } from "lucide-react";
+import { motion } from "motion/react";
+import { useState } from "react";
 import {
   Select,
   SelectContent,
@@ -18,11 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { motion } from "motion/react";
-import { useEffect, useState } from "react";
 import SuccessModal from "../ui/SuccessModal";
-
-const fallbackState = "Select state";
 
 const initialForm = {
   name: "",
@@ -87,18 +85,29 @@ const benefits = [
   "Reduced commission for early partners",
 ];
 
-export function PartnerInterestForm() {
+export function PartnerInterestForm({
+  onClose,
+  modal = true,
+}) {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle");
+  
   const [message, setMessage] = useState("");
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(modal);
   const [showSuccess, setShowSuccess] = useState(false);
   // Auto-detect removed: default to unloaded but ready state
-  const [locationLoaded, setLocationLoaded] = useState(true);
+  const [locationLoaded] = useState(true);
 
   const updateField = (event) => {
     const { name, value } = event.target;
     setForm((current) => ({ ...current, [name]: value }));
+  };
+
+  const closeSuccess = () => {
+    setShowSuccess(false);
+    if (modal && status === "success") {
+      onClose?.();
+    }
   };
 
   
@@ -146,7 +155,10 @@ export function PartnerInterestForm() {
             <button
               type="button"
               aria-label="Close partner form"
-              onClick={() => setShowPopup(false)}
+             onClick={() => {
+  setShowPopup(false);
+  onClose?.();
+}}
               className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition hover:bg-orange-100 hover:text-orange-600"
             >
               <X className="h-5 w-5" />
@@ -159,75 +171,74 @@ export function PartnerInterestForm() {
               updateField={updateField}
               handleSubmit={handleSubmit}
               locationLoaded={locationLoaded}
-              showSuccess={showSuccess}
-              setShowSuccess={setShowSuccess}
               className="border-0 shadow-none"
             />
           </motion.div>
         </div>
       )}
 
-      <section
-        id="partner-interest"
-        className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
-      >
-        <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
+      {!modal && (
+        <section
+          id="partner-interest"
+          className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
+        >
+          <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
 
-        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="max-w-2xl"
-            >
-              <h2 className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
-                Grow Your Vehicle Business With{" "}
-                <span className="text-primary">Swarikaro</span>
-              </h2>
+          <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="max-w-2xl"
+              >
+                <h2 className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
+                  Grow Your Vehicle Business With{" "}
+                  <span className="text-primary">Swarikaro</span>
+                </h2>
 
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
-                Connect with travelers planning their journeys in advance.
-              </p>
+                <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
+                  Connect with travelers planning their journeys in advance.
+                </p>
 
-              <div className="mt-8">
-                <h3 className="text-xl font-bold text-slate-600 ">
-                  Become an Early Partner
-                </h3>
-                <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  {benefits.map((benefit) => (
-                    <div
-                      key={benefit}
-                      className="flex items-center gap-3 rounded-lg border border-border bg-white px-4 py-3 shadow-soft"
-                    >
-                      <CheckCircle2 className="h-5 w-5 shrink-0 text-slate-600" />
-                      <span className="text-sm  text-slate-600">{benefit}</span>
-                    </div>
-                  ))}
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-slate-600 ">
+                    Become an Early Partner
+                  </h3>
+                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                    {benefits.map((benefit) => (
+                      <div
+                        key={benefit}
+                        className="flex items-center gap-3 rounded-lg border border-border bg-white px-4 py-3 shadow-soft"
+                      >
+                        <CheckCircle2 className="h-5 w-5 shrink-0 text-slate-600" />
+                        <span className="text-sm  text-slate-600">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            <PartnerFormCard
-              form={form}
-              status={status}
-              message={message}
-              updateField={updateField}
-              handleSubmit={handleSubmit}
-              locationLoaded={locationLoaded}
-              showSuccess={showSuccess}
-              setShowSuccess={setShowSuccess}
-              motionProps={{
-                initial: { opacity: 0, y: 24 },
-                whileInView: { opacity: 1, y: 0 },
-                viewport: { once: true },
-                transition: { duration: 0.5, delay: 0.1 },
-              }}
-            />
+              <PartnerFormCard
+                form={form}
+                status={status}
+                message={message}
+                updateField={updateField}
+                handleSubmit={handleSubmit}
+                locationLoaded={locationLoaded}
+                motionProps={{
+                  initial: { opacity: 0, y: 24 },
+                  whileInView: { opacity: 1, y: 0 },
+                  viewport: { once: true },
+                  transition: { duration: 0.5, delay: 0.1 },
+                }}
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+      <SuccessModal open={showSuccess} message={message || "Thank you."} onClose={closeSuccess} />
     </>
   );
 }
@@ -239,8 +250,6 @@ function PartnerFormCard({
   updateField,
   handleSubmit,
   locationLoaded,
-  showSuccess,
-  setShowSuccess,
   className = "",
   motionProps = {},
 }) {
@@ -408,7 +417,6 @@ function PartnerFormCard({
           {message}
         </p>
       )}
-      <SuccessModal open={showSuccess} message={message || "Thank you."} onClose={() => setShowSuccess(false)} />
     </motion.form>
   );
 }
