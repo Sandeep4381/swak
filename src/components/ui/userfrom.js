@@ -121,7 +121,7 @@ export default function UserForm({ onSuccess }) {
         ) : (
           <>
             <Send size={18} />
-    Submit To
+    Submit
           </>
         )}
       </button>
