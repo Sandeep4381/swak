@@ -423,7 +423,7 @@ export default function AboutContent() {
             <div className="group overflow-hidden rounded-[28px] border border-orange-100 bg-[#FFF8F1] shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
               <Image
-                src="/about/about_3.webp"
+                src="/about/about_4.webp"
                 alt="Customers"
                 width={600}
                 height={400}
