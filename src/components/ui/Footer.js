@@ -67,9 +67,11 @@ function FooterSection({
   onToggle,
   children,
   className = "",
+  showArrow = true,
 }) {
   const isOpen = openSections[id];
 
+  
   return (
     <section
       className={`border-t border-white/[0.08] pt-8 lg:border-t-0 lg:pt-0 ${className}`}
@@ -84,11 +86,13 @@ function FooterSection({
           <h3 className="text-lg font-extrabold text-white">{title}</h3>
           <span className="mt-3 block h-1 w-12 rounded-full bg-orange-500" />
         </div>
-        <ChevronDown
-          className={`mt-1 h-5 w-5 shrink-0 text-white transition-transform md:hidden ${
-            isOpen ? "rotate-0" : "-rotate-90"
-          }`}
-        />
+      {showArrow && (
+  <ChevronDown
+    className={`mt-1 h-5 w-5 shrink-0 text-white transition-transform md:hidden ${
+      isOpen ? "rotate-0" : "-rotate-90"
+    }`}
+  />
+)}
       </button>
 
       <div className={`${isOpen ? "block" : "hidden"} md:block`}>
@@ -104,9 +108,9 @@ function AppCard({ title, tone = "user" }) {
       <div className="min-w-[82px]">
         
         <h4 className="text-lg font-bold leading-tight text-white sm:text-xl lg:text-2xl">
-          <span className={tone === "partner" ? "text-orange-400" : ""}>
+          
             {title}
-          </span>
+          
         </h4>
       </div>
 
@@ -159,6 +163,7 @@ export default function Footer() {
       [section]: !current[section],
     }));
   };
+  
 
   return (
     <footer className="relative overflow-hidden bg-[#073d4c] text-white">
@@ -307,12 +312,13 @@ Maharashtra, 421201
               </FooterSection>
 
               <FooterSection
-                id="product"
-                title="Product by Mystrymind"
-                openSections={openSections}
-                onToggle={toggleSection}
-                className="lg:border-t lg:border-white/[0.08] lg:pt-4"
-              >
+  id="product"
+  title="Product by Mystrymind"
+  openSections={openSections}
+  onToggle={toggleSection}
+  showArrow={false}
+  className="lg:border-t lg:border-white/[0.08] lg:pt-4"
+>
                 
               </FooterSection>
             </div>
@@ -320,9 +326,18 @@ Maharashtra, 421201
         </div>
 
         <div className="mt-4 border-t border-white/[0.08] pt-6">
-          <p className="text-left text-sm font-semibold text-white/58 md:text-center">
-           &copy; 2026 Mystrymind Innovations Private Limited. All rights reserved.
-          </p>
+        <p className="text-center text-sm font-semibold text-white/60">
+  &copy; 2026{" "}
+  <Link
+    href="https://mystrymind.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition hover:text-white hover:underline"
+  >
+    Mystrymind Innovations Private Limited
+  </Link>{" "}
+  All rights reserved.
+</p>
         </div>
       </div>
     </footer>

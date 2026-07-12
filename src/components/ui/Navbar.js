@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import ComingSoonButton from "./comingsoon";
 
 const navLinks = [
-  // { name: "Home", href: "/" },
+  { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Contact", href: "/contact" },
   { name: "Become a Partner", href: "/partner" },
