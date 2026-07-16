@@ -114,7 +114,7 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-3CEF7LZYXE'');
+            gtag('config', 'G-3CEF7LZYXE');
           `}
         </Script>
         <JsonLd data={siteSchemas} />
