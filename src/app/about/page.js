@@ -3,12 +3,17 @@ import {
   JsonLd,
 } from "@/components/seo/structured-data";
 import AboutContent from "./AboutContent";
+import {
+  SITE_NAME,
+  SITE_URL,
 
+  OG_IMAGE_URL,
+} from "@/lib/metadata";
 export const metadata = {
   title: "About Us | Swarikaro - Smart Vehicle Rental Platform",
   description:
     "Learn about Swarikaro, India's growing vehicle rental platform connecting vehicle owners, rental shops, and travelers. Discover our story, mission, vision, and how we're building a smarter mobility network.",
-
+metadataBase: new URL(SITE_URL),
   keywords: [
     "About Swarikaro",
     "Vehicle Rental Platform",
@@ -32,11 +37,11 @@ export const metadata = {
     title: "About Swarikaro | Smart Vehicle Rental Platform",
     description:
       "Discover the story behind Swarikaro and how we're helping families, vehicle owners, rental shops, and travelers connect through a trusted mobility platform.",
-    url: "https://swarikaro.com/about",
+    url: `${SITE_URL}/about`,
     siteName: "Swarikaro",
     images: [
       {
-        url: "/about/about-og.jpg",
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: "About Swarikaro",
@@ -51,23 +56,30 @@ export const metadata = {
     title: "About Swarikaro",
     description:
       "Learn more about Swarikaro's journey, mission, and vision for building India's trusted vehicle rental network.",
-    images: ["/about/about-og.jpg"],
+    images: [OG_IMAGE_URL],
   },
 
   alternates: {
-    canonical: "https://swarikaro.com/about",
+    canonical: `${SITE_URL}/about`,
   },
 
-  robots: {
+ robots: {
+  index: true,
+  follow: true,
+  googleBot: {
     index: true,
     follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
   },
+},
 };
 
 export default function AboutPage() {
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", item: "https://swarikaro.com" },
-    { name: "About", item: "https://swarikaro.com/about" },
+    { name: "Home", item: SITE_URL },
+    { name: "About", item: `${SITE_URL}/about` },
   ]);
 
   return (

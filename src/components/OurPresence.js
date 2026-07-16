@@ -247,7 +247,7 @@ export default function OurPresence() {
             <div className="relative w-full" style={{ paddingBottom: "105%" }}>
               <Image
                 src="/map_real.webp"
-                alt="India map"
+                alt="Swarikaro Presence Map"
                 fill
                 className="absolute inset-0 object-contain select-none"
                

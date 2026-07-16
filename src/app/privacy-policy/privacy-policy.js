@@ -190,9 +190,9 @@ export default function PrivacyPolicy() {
           <div className="grid items-center gap-8 p-5 sm:p-6 lg:grid-cols-2 lg:p-10">
             {/* Left Content */}
             <div className="text-center lg:text-left">
-              <h2 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
+              <h1 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
                 Privacy <span className="text-orange-500">Policy</span>
-              </h2>
+              </h1>
 
               <p className="mt-3 text-lg leading-8 text-slate-600">
                 We value your privacy and are committed to protecting your personal
@@ -289,11 +289,11 @@ xl:grid-cols-3
 
                 {section.number === 14 && (
                   <a
-                    href="mailto:swarikaro@gmail.com"
+                  href="mailto:support@swarikaro.com"
                     className="mt-5 flex items-center justify-center gap-2 rounded-xl bg-orange-500 py-3 font-semibold text-white transition hover:bg-orange-600"
                   >
                     <Mail size={18} />
-                    swarikaro@gmail.com
+                    support@swarikaro.com
                   </a>
                 )}
               </article>

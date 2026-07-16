@@ -4,12 +4,17 @@ import {
   JsonLd,
 } from "@/components/seo/structured-data";
 import FAQContent from "./FAQContent";
-
+import {
+  SITE_NAME,
+  SITE_URL,
+  OG_IMAGE_URL,
+} from "@/lib/metadata";
+import { FAQS } from "@/lib/faqs";
 export const metadata = {
   title: "FAQ | Swarikaro - Frequently Asked Questions",
   description:
     "Find answers to the most frequently asked questions about Swarikaro vehicle rentals, bookings, payments, vehicle owners, rental shops and customer support.",
-
+  metadataBase: new URL(SITE_URL),
   keywords: [
     "Swarikaro FAQ",
     "Vehicle Rental FAQ",
@@ -23,19 +28,19 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://swarikaro.com/faq",
+    canonical: `${SITE_URL}/faq`,
   },
 
   openGraph: {
-    title: "Frequently Asked Questions | Swarikaro",
+    title: `Frequently Asked Questions | ${SITE_NAME}`,
     description:
       "Everything you need to know about renting and listing vehicles on Swarikaro.",
-    url: "https://www.swarikaro.com/faq",
-    siteName: "Swarikaro",
+    url: `${SITE_URL}/faq`,
+    siteName: SITE_NAME,
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: OG_IMAGE_URL, // Place this image in /public
         width: 1200,
         height: 630,
         alt: "Swarikaro FAQ",
@@ -45,65 +50,33 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Frequently Asked Questions | Swarikaro",
+    title: `Frequently Asked Questions | ${SITE_NAME}`,
     description: "Answers to common questions about Swarikaro rentals.",
-    images: ["/og-image.png"],
+    images: [OG_IMAGE_URL],
   },
-  robots: {
+robots: {
+  index: true,
+  follow: true,
+  googleBot: {
     index: true,
     follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
   },
+},
 };
 
 export default function FAQPage() {
-  const faqSchema = buildFaqSchema([
-    {
-      question: "What is Swarikaro?",
-      answer:
-        "Swarikaro is a vehicle rental platform that connects vehicle owners, rental shops and customers for hourly and daily rentals.",
-    },
-    {
-      question: "How can I rent a vehicle?",
-      answer:
-        "Browse available vehicles, select your preferred vehicle, upload required documents and confirm your booking.",
-    },
-    {
-      question: "Can I rent a vehicle without a driver?",
-      answer:
-        "Yes, depending on the owner's preferences and vehicle availability.",
-    },
-    {
-      question: "What documents are required?",
-      answer:
-        "A valid Driving License, Aadhaar Card and any other verification requested by the owner.",
-    },
-    {
-      question: "How can I list my vehicle?",
-      answer:
-        "Create an owner account, submit vehicle details and complete verification to start earning.",
-    },
-    {
-      question: "How will I receive payments?",
-      answer:
-        "Payments are securely transferred to your registered bank account after booking completion.",
-    },
-    {
-      question: "How do rental shops manage bookings?",
-      answer:
-        "Rental shops receive a dashboard to manage vehicles, bookings and customers easily.",
-    },
-    {
-      question: "Is insurance provided?",
-      answer: "Insurance depends on the listed vehicle and owner policy.",
-    },
-    {
-      question: "How can I contact customer support?",
-      answer: "Reach us via phone, email or the Contact Us page.",
-    },
-  ]);
+const faqSchema = buildFaqSchema(
+  FAQS.map(({ question, answer }) => ({
+    question,
+    answer,
+  }))
+);
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", item: "https://swarikaro.com" },
-    { name: "FAQ", item: "https://swarikaro.com/faq" },
+  { name: "Home", item: SITE_URL },
+    { name: "FAQ", item: `${SITE_URL}/faq` },
   ]);
 
   return (

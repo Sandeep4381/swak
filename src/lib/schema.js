@@ -8,7 +8,7 @@ import {
 } from "./metadata";
 
 const SOCIAL_URLS = [
-  "https://www.facebook.com/share/1ErS5CHBLw/",
+  "https://www.facebook.com/swarikaro?rdid=WIECxs7eK2tgUxg5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Ddw5v6teS%2F#",
   "https://www.instagram.com/swarikaro?igsh=OGFwdHMwb2V4bmlm",
   "https://www.linkedin.com/company/swarikaro/",
   "https://www.youtube.com/@swarikaro",
