@@ -1,6 +1,6 @@
 "use client";
 
-import { PartnerInterestForm } from "@/components/whySwariKaro/form_partner";
+import { PartnerInterestForm } from "@/components/partner/form_partner";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -266,7 +266,7 @@ export default function App() {
                     <img
                       key={src}
                       src={src}
-                      alt="City"
+                      alt="Swarikaro car and bike rental platform"
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
                       style={{ opacity: phoneImg === i ? 0.45 : 0 }}
                     />

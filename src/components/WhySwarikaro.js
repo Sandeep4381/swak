@@ -167,7 +167,7 @@ export default function WhySwarikaro() {
 
             <Image
               src="/whySwarikaro/why.webp"
-              alt="Why Swarikaro"
+              alt="Swarikaro Location Based Search"
               width={720}
               height={720}
               priority
