@@ -1,9 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SplashProvider from "@/components/ui/SplashProvider";
-import PageLoader from "@/components/ui/PageLoader";
-
-
+import Script from "next/script";
 import {
   buildLocalBusinessSchema,
   buildMobileApplicationSchema,
@@ -13,13 +10,15 @@ import {
 } from "@/components/seo/structured-data";
 import Footer from "@/components/ui/Footer";
 import Navbar from "@/components/ui/Navbar";
-
+import PageLoader from "@/components/ui/PageLoader";
+import SplashProvider from "@/components/ui/SplashProvider";
 import {
+  OG_IMAGE_URL,
+  SITE_DESCRIPTION,
   SITE_NAME,
   SITE_URL,
-  SITE_DESCRIPTION,
-  OG_IMAGE_URL,
 } from "@/lib/metadata";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,29 +30,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
- title: {
-  default: `${SITE_NAME} | Apna Safar Apne Log`,
-  template: `%s | ${SITE_NAME}`,
-},
+  title: {
+    default: `${SITE_NAME} | Apna Safar Apne Log`,
+    template: `%s | ${SITE_NAME}`,
+  },
 
-description: SITE_DESCRIPTION,
+  description: SITE_DESCRIPTION,
 
-metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(SITE_URL),
 
-alternates: {
-  canonical: SITE_URL,
-},
+  alternates: {
+    canonical: SITE_URL,
+  },
 
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
- openGraph: {
-  title: `${SITE_NAME} | Apna Safar Apne Log`,
-  description: SITE_DESCRIPTION,
-  url: SITE_URL,
-  siteName: SITE_NAME,
+  openGraph: {
+    title: `${SITE_NAME} | Apna Safar Apne Log`,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
     images: [
       {
         url: OG_IMAGE_URL,
@@ -67,21 +66,21 @@ alternates: {
   },
   twitter: {
     card: "summary_large_image",
-   title: `${SITE_NAME} | Apna Safar Apne Log`,
-description: SITE_DESCRIPTION,
-images: [OG_IMAGE_URL],
+    title: `${SITE_NAME} | Apna Safar Apne Log`,
+    description: SITE_DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
- robots: {
-  index: true,
-  follow: true,
-  googleBot: {
+  robots: {
     index: true,
     follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
-},
 };
 
 export default function RootLayout({ children }) {
@@ -106,13 +105,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-3CEF7LZYXE"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3CEF7LZYXE'');
+          `}
+        </Script>
         <JsonLd data={siteSchemas} />
         <PageLoader />
         <Navbar />
 
-        <SplashProvider>
-          {children}
-        </SplashProvider>
+        <SplashProvider>{children}</SplashProvider>
         <Footer />
       </body>
     </html>
