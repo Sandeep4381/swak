@@ -1,23 +1,29 @@
 import { NextResponse } from "next/server";
 
-const CANONICAL_HOST = "swarikaro.com";
+const CANONICAL_ORIGIN = "https://swarikaro.com";
 
 export function proxy(request) {
-  const url = request.nextUrl.clone();
-  const host = request.headers.get("host") || "";
+  const forwardedHost =
+    request.headers.get("x-forwarded-host") ||
+    request.headers.get("host") ||
+    "";
 
-  if (host.startsWith("www.")) {
-    url.hostname = CANONICAL_HOST;
-    return NextResponse.redirect(url, 308);
+  const hostname = forwardedHost.split(":")[0].toLowerCase();
+
+  if (hostname === "www.swarikaro.com") {
+    const destination = new URL(
+      `${request.nextUrl.pathname}${request.nextUrl.search}`,
+      CANONICAL_ORIGIN,
+    );
+
+    return NextResponse.redirect(destination, 308);
   }
 
-  const response = NextResponse.next();
-  response.headers.set("x-robots-tag", "index, follow");
-  return response;
+  return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
   ],
 };

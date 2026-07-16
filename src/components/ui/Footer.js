@@ -71,7 +71,7 @@ function FooterSection({
 }) {
   const isOpen = openSections[id];
 
-  
+
   return (
     <section
       className={`border-t border-white/[0.08] pt-8 lg:border-t-0 lg:pt-0 ${className}`}
@@ -86,13 +86,12 @@ function FooterSection({
           <h3 className="text-lg font-extrabold text-white">{title}</h3>
           <span className="mt-3 block h-1 w-12 rounded-full bg-orange-500" />
         </div>
-      {showArrow && (
-  <ChevronDown
-    className={`mt-1 h-5 w-5 shrink-0 text-white transition-transform md:hidden ${
-      isOpen ? "rotate-0" : "-rotate-90"
-    }`}
-  />
-)}
+        {showArrow && (
+          <ChevronDown
+            className={`mt-1 h-5 w-5 shrink-0 text-white transition-transform md:hidden ${isOpen ? "rotate-0" : "-rotate-90"
+              }`}
+          />
+        )}
       </button>
 
       <div className={`${isOpen ? "block" : "hidden"} md:block`}>
@@ -106,11 +105,11 @@ function AppCard({ title, tone = "user" }) {
   return (
     <div className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.045] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] lg:block lg:p-6">
       <div className="min-w-[82px]">
-        
+
         <h4 className="text-lg font-bold leading-tight text-white sm:text-xl lg:text-2xl">
-          
-            {title}
-          
+
+          {title}
+
         </h4>
       </div>
 
@@ -163,7 +162,7 @@ export default function Footer() {
       [section]: !current[section],
     }));
   };
-  
+
 
   return (
     <footer className="relative overflow-hidden bg-[#073d4c] text-white">
@@ -181,13 +180,13 @@ export default function Footer() {
                 className="flex justify-center md:inline-flex md:justify-start"
               >
                 <Image
-  src="/logo.png"
-  alt="Swarikaro"
-  width={200}
-  height={70}
-  className="w-[160px] md:w-[180px] lg:w-[200px] h-auto"
-  style={{ height: 'auto' }}
-/>
+                  src="/logo.png"
+                  alt="Swarikaro"
+                  width={200}
+                  height={70}
+                  className="w-[160px] md:w-[180px] lg:w-[200px] h-auto"
+                  style={{ height: 'auto' }}
+                />
               </Link>
 
               <p className="mt-7 max-w-sm text-xl font-semibold leading-relaxed text-white/82 md:text-lg lg:text-2xl lg:leading-[1.75]">
@@ -209,13 +208,13 @@ export default function Footer() {
                   className="flex items-center gap-3 font-semibold transition hover:text-orange-300"
                 >
                   <Phone className="h-5 w-5 shrink-0 text-orange-500" />
-                 +91 9082069773
+                  +91 9082069773
                 </a>
 
                 <p className="flex items-center gap-3 font-semibold">
                   <MapPin className="h-5 w-5 shrink-0 text-orange-500" />
                   Dombivli East,
-Maharashtra, 421201
+                  Maharashtra, 421201
                 </p>
               </div>
             </div>
@@ -235,9 +234,8 @@ Maharashtra, 421201
                     <Link
                       key={item.label}
                       href={item.href}
-                      className={`flex min-h-11 items-center gap-3 border-b border-white/[0.07] pb-2 text-sm font-semibold transition hover:text-orange-300 lg:text-base ${
-                        isActive ? "text-orange-400" : "text-white/70"
-                      }`}
+                      className={`flex min-h-11 items-center gap-3 border-b border-white/[0.07] pb-2 text-sm font-semibold transition hover:text-orange-300 lg:text-base ${isActive ? "text-orange-400" : "text-white/70"
+                        }`}
                     >
                       <Icon className="h-5 w-5 shrink-0 text-white/42" />
                       <span className="min-w-0 flex-1">{item.label}</span>
@@ -311,33 +309,23 @@ Maharashtra, 421201
                 </div>
               </FooterSection>
 
-              <FooterSection
-  id="product"
-  title="Product by Mystrymind"
-  openSections={openSections}
-  onToggle={toggleSection}
-  showArrow={false}
-  className="lg:border-t lg:border-white/[0.08] lg:pt-4"
->
-                
-              </FooterSection>
             </div>
           </div>
         </div>
 
         <div className="mt-4 border-t border-white/[0.08] pt-6">
-        <p className="text-center text-sm font-semibold text-white/60">
-  &copy; 2026{" "}
-  <Link
-    href="https://mystrymind.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="transition hover:text-white hover:underline"
-  >
-    Mystrymind Innovations Private Limited
-  </Link>{" "}
-  All rights reserved.
-</p>
+          <p className="text-center text-sm font-semibold text-white/60">
+            &copy; 2026{" "}
+            <Link
+              href="https://mystrymind.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-white hover:underline"
+            >
+              Mystrymind Innovations Private Limited
+            </Link>{" "}
+            All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

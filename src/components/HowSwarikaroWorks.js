@@ -6,7 +6,7 @@ const mapIllustration = "/howSwarikaro/image-3.png";
 
 <Image
   src={mapIllustration}
-  alt="How Swarikaro"
+  alt="Swarikaro Location Based Search"
   width={500}
   height={800}
 />
@@ -147,7 +147,7 @@ const sectionRef = useRef(null);
               />
              <ImageWithFallback
   src={mapIllustration}
-  alt="Map illustration with location pin and service icons"
+  alt="Swarikaro Booking Process Illustration"
   className="relative w-full h-full object-contain rounded-3xl"
   style={{
     filter: "drop-shadow(0 20px 48px rgba(249,115,22,0.18))",

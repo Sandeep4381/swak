@@ -81,7 +81,7 @@ export default function AboutContent() {
                 {/* Hero Image */}
                 <Image
                   src="/about/about_hero.webp"
-                  alt="About Swarikaro"
+                  alt="About Swarikaro - A Smarter Way to Access and Share Mobility"
                   width={900}
                   height={750}
                   priority
@@ -273,7 +273,7 @@ export default function AboutContent() {
               <div className="overflow-hidden rounded-[20px]">
                 <Image
                   src="/about/story.webp"
-                  alt="Our Story"
+                  alt="Swarikaro Our Story"
                   width={900}
                   height={700}
                   className="w-full h-full object-cover opacity-70"
@@ -363,7 +363,7 @@ export default function AboutContent() {
 
               <Image
                 src="/about/about_1.webp"
-                alt="Vehicle Owners"
+                alt="Vehicle Owners Earn More"
                 width={600}
                 height={400}
                 className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
@@ -394,7 +394,7 @@ export default function AboutContent() {
 
               <Image
                 src="/about/about_2.webp"
-                alt="Rental Shops"
+                alt="Rental Shops Go Digital"
                 width={600}
                 height={400}
                 className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
@@ -424,7 +424,7 @@ export default function AboutContent() {
 
               <Image
                 src="/about/about_4.webp"
-                alt="Customers"
+                alt="Customers and Travellers"
                 width={600}
                 height={400}
                 className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"

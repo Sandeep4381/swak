@@ -3,7 +3,7 @@
 import { Bell, Clock3, Smartphone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { PartnerInterestForm } from "@/components/whySwariKaro/form_partner";
+import { PartnerInterestForm } from "@/components/partner/form_partner";
 import UserForm from "./userfrom";
 
 const popupContent = {

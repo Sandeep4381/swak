@@ -22,7 +22,7 @@ export function Hero() {
       >
         <img
           src="/partner/bg-l.webp"
-          alt=""
+          alt="swarikaro partner"
           aria-hidden="true"
           className="absolute right-0 top-0 h-full w-auto max-w-none"
           style={{
@@ -53,7 +53,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0 lg:hidden">
         <img
           src="/partner/bg-m.webp"
-          alt=""
+          alt="swarikaro partner "
           aria-hidden="true"
           className="w-full h-full"
           style={{ objectFit: "cover", objectPosition: "center center" }}

@@ -1,14 +1,20 @@
 import {
   buildBreadcrumbSchema,
+  buildOrganizationSchema,
   JsonLd,
 } from "@/components/seo/structured-data";
 import TermsContent from "./TermsContent";
-
+import {
+  SITE_NAME,
+  SITE_URL,
+  SITE_DESCRIPTION,
+  OG_IMAGE_URL,
+} from "@/lib/metadata";
 export const metadata = {
   title: "Terms & Conditions | Swarikaro",
   description:
     "Read the Terms & Conditions of Swarikaro. Learn about website usage, user responsibilities, eligibility, intellectual property, privacy, limitations of liability, and other legal information.",
-
+metadataBase: new URL(SITE_URL),
   keywords: [
     "Swarikaro Terms",
     "Terms and Conditions",
@@ -49,10 +55,17 @@ export const metadata = {
     canonical: "https://swarikaro.com/terms-and-condition",
   },
 
-  robots: {
+robots: {
+  index: true,
+  follow: true,
+  googleBot: {
     index: true,
     follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
   },
+},
 };
 
 export default function TermsPage() {
@@ -63,10 +76,15 @@ export default function TermsPage() {
       item: "https://swarikaro.com/terms-and-condition",
     },
   ]);
-
+const organizationSchema = buildOrganizationSchema();
   return (
     <>
-      <JsonLd data={breadcrumbSchema} />
+     <JsonLd
+  data={[
+    breadcrumbSchema,
+    organizationSchema,
+  ]}
+/>
       <TermsContent />
     </>
   );

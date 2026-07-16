@@ -260,9 +260,9 @@ export default function TermsContent() {
       >
 
         <div className="mx-auto max-w-4xl px-4  text-center">
-   <h2 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
+   <h1 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
     Terms <span className="text-orange-500">and Conditions</span>
-  </h2>
+  </h1>
 
   <p className="mt-5 text-lg leading-8 text-slate-600">
     Please read these terms and conditions carefully before using the

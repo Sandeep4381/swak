@@ -1,14 +1,20 @@
 import {
   buildBreadcrumbSchema,
+  buildOrganizationSchema,
   JsonLd,
 } from "@/components/seo/structured-data";
 import PrivacyPolicy from "./privacy-policy";
-
+import {
+  SITE_NAME,
+  SITE_URL,
+  OG_IMAGE_URL,
+} from "@/lib/metadata";
 export const metadata = {
-  title: "Privacy Policy | Swarikaro",
+  title: `Privacy Policy | ${SITE_NAME}`,
   description:
     "Read the Swarikaro Website Privacy Policy to learn how we collect, use, protect, retain, and share information submitted through our website, contact forms, and partner inquiry forms.",
-  keywords: [
+  metadataBase: new URL(SITE_URL),
+    keywords: [
     "Swarikaro Privacy Policy",
     "Privacy Policy",
     "Website Privacy Policy",
@@ -18,17 +24,17 @@ export const metadata = {
     "Mobility Platform Privacy",
   ],
   openGraph: {
-    title: "Privacy Policy | Swarikaro",
+    title: `Privacy Policy | ${SITE_NAME}`,
     description:
-      "Learn how Swarikaro protects personal information collected through the website.",
-    url: "https://www.swarikaro.com/privacy-policy",
-    siteName: "Swarikaro",
+      "Learn how ${SITE_NAME} protects personal information collected through the website.",
+    url: `${SITE_URL}/privacy-policy`,
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/og-image.png",
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Swarikaro Privacy Policy",
+        alt: `${SITE_NAME} Privacy Policy`,
       },
     ],
     locale: "en_IN",
@@ -38,27 +44,39 @@ export const metadata = {
     card: "summary_large_image",
     title: "Privacy Policy | Swarikaro",
     description:
-      "Read the Swarikaro Website Privacy Policy for website and partner inquiry data practices.",
-    images: ["/og-image.png"],
+      "Read the ${SITE_NAME} Website Privacy Policy for website and partner inquiry data practices.",
+    images: [OG_IMAGE_URL],
   },
   alternates: {
-    canonical: "https://swarikaro.com/privacy-policy",
+    canonical: `${SITE_URL}/privacy-policy`,
   },
-  robots: {
+ robots: {
+  index: true,
+  follow: true,
+  googleBot: {
     index: true,
     follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
   },
+},
 };
 
 export default function PrivacyPolicyPage() {
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", item: "https://swarikaro.com" },
-    { name: "Privacy Policy", item: "https://swarikaro.com/privacy-policy" },
+    { name: "Home", item: `${SITE_URL}` },
+    { name: "Privacy Policy", item: `${SITE_URL}/privacy-policy` },
   ]);
-
+const organizationSchema = buildOrganizationSchema();
   return (
     <>
-      <JsonLd data={breadcrumbSchema} />
+     <JsonLd
+  data={[
+    breadcrumbSchema,
+    organizationSchema,
+  ]}
+/>
       <PrivacyPolicy />
     </>
   );
