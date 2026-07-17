@@ -106,7 +106,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-3CEF7LZYXE"
+          src="https://www.googletagmanager.com/gtag/js?id=G-9ZHSK1059R"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -114,7 +114,7 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-3CEF7LZYXE');
+            gtag('config', 'G-9ZHSK1059R');
           `}
         </Script>
         <JsonLd data={siteSchemas} />
