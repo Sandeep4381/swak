@@ -26,7 +26,7 @@ import ComingSoonButton from "./comingsoon";
 
 const exploreLinks = [
   { label: "About Swarikaro", href: "/about", icon: UsersRound },
-  { label: "Become a Partner", href: "/partner", icon: Briefcase },
+  { label: "Become a Partner", href: "/swarikaro-partner", icon: Briefcase },
   { label: "FAQ", href: "/faq", icon: CircleHelp },
   { label: "Contact", href: "/contact", icon: Mail },
   { label: "Privacy Policy", href: "/privacy-policy", icon: ShieldCheck },
@@ -121,7 +121,7 @@ function AppCard({ title, tone = "user" }) {
         >
           <Image
             src="/footer/gplay.png"
-            alt="Google Play"
+            alt="Swarikaro App"
             width={150}
             height={45}
             className="h-auto w-[clamp(82px,28vw,104px)] object-contain transition-transform duration-300 hover:scale-105 sm:w-[140px] md:w-[132px] lg:w-[128px] xl:w-[150px]"
@@ -135,7 +135,7 @@ function AppCard({ title, tone = "user" }) {
         >
           <Image
             src="/footer/app-store-badge.svg"
-            alt="App Store"
+            alt="Swarikaro App"
             width={150}
             height={45}
             className="h-auto w-[clamp(82px,28vw,104px)] object-contain transition-transform duration-300 hover:scale-105 sm:w-[140px] md:w-[132px] lg:w-[128px] xl:w-[150px]"
@@ -181,7 +181,7 @@ export default function Footer() {
               >
                 <Image
                   src="/logo.png"
-                  alt="Swarikaro"
+                  alt="Swarikaro App"
                   width={200}
                   height={70}
                   className="w-[160px] md:w-[180px] lg:w-[200px] h-auto"
@@ -196,19 +196,19 @@ export default function Footer() {
 
               <div className="mt-7 space-y-4 border-t border-white/[0.08] pt-6 text-white/76 lg:mt-10 lg:space-y-6">
                 <a
-                  href="mailto:karoswari@gmail.com"
+                  href="mailto:support@swarikaro.com"
                   className="flex items-center gap-3 font-semibold transition hover:text-orange-300"
                 >
                   <Mail className="h-5 w-5 shrink-0 text-orange-500" />
-                  <span className="break-all">karoswari@gmail.com</span>
+                  <span className="break-all">support@swarikaro.com</span>
                 </a>
 
                 <a
-                  href="tel:+91 9082069773"
+                  href="tel:+91 9065442523"
                   className="flex items-center gap-3 font-semibold transition hover:text-orange-300"
                 >
                   <Phone className="h-5 w-5 shrink-0 text-orange-500" />
-                  +91 9082069773
+                  +91 9065442523
                 </a>
 
                 <p className="flex items-center gap-3 font-semibold">

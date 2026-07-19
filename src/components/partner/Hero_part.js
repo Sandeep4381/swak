@@ -22,7 +22,7 @@ export function Hero() {
       >
         <img
           src="/partner/bg-l.webp"
-          alt="swarikaro partner"
+          alt="Become a Swarikaro Partner"
           aria-hidden="true"
           className="absolute right-0 top-0 h-full w-auto max-w-none"
           style={{
@@ -53,7 +53,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0 lg:hidden">
         <img
           src="/partner/bg-m.webp"
-          alt="swarikaro partner "
+          alt="Become a Swarikaro Partner "
           aria-hidden="true"
           className="w-full h-full"
           style={{ objectFit: "cover", objectPosition: "center center" }}
@@ -124,18 +124,35 @@ export function Hero() {
 </motion.h1>
 
           {/* Sub-copy */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.48 }}
-            className="text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-xl"
-            style={{ color: "rgba(255,255,255,0.72)" }}
-          >
-           Whether you own a single vehicle, manage a rental shop, or operate a fleet, Swarikaro helps you connect with customers looking for reliable rental and reservation services.
- <br />
- <br />List your vehicles, manage bookings, track earnings, and grow your business—all from one easy-to-use Partner App.
-           
-          </motion.p>
+         <motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.48 }}
+  className="text-base sm:text-lg lg:text-xl leading-relaxed mb-3 max-w-xl"
+  style={{ color: "rgba(255,255,255,0.72)" }}
+>
+  Whether you own a single bike, manage a rental shop, or operate a fleet of
+  vehicles, <span className="font-semibold text-white">Swarikaro Partner</span>{" "}
+  helps you connect with customers looking for trusted vehicle rental and
+  reservation services.
+  </motion.p>
+
+<motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.48 }}
+  className="text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-xl"
+  style={{ color: "rgba(255,255,255,0.72)" }}
+>
+
+  List your bikes, scooters, cars, vans, buses, and other vehicles, manage
+  bookings, track earnings, and grow your business through one easy to use
+  Partner App.
+
+
+
+  Join Swarikaro and become part of India's growing vehicle rental network.
+</motion.p>
 
           {/* Stats */}
           <motion.div
@@ -169,26 +186,47 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.76 }}
-            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto"
           >
             
-            <motion.div
-              whileHover={{ y: -3 }}
-              whileTap={{ scale: 0.97 }}
-            >
-            <ComingSoonButton
-              ariaLabel="Download partner app"
-              variant="partner"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base border-2 transition-all duration-200"
-              style={{
-                borderColor: "rgba(255,255,255,0.28)",
-                color: "white",
-                background: "rgba(255,255,255,0.06)",
-              }}
-            >
-              Download Partner App
-            </ComingSoonButton>
-            </motion.div>
+           <motion.div
+  whileHover={{ y: -3 }}
+  whileTap={{ scale: 0.97 }}
+  className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:flex-row"
+>
+  <ComingSoonButton
+    ariaLabel="Download partner app"
+    variant="partner"
+    className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 px-8 py-4 text-base font-semibold transition-all duration-200 sm:w-auto"
+    style={{
+      borderColor: "rgba(255,255,255,0.28)",
+      color: "white",
+      background: "rgba(255,255,255,0.06)",
+    }}
+  >
+    Download Partner App
+  </ComingSoonButton>
+
+  <button
+    type="button"
+    aria-label="See how it works"
+    onClick={() => {
+      const target = document.getElementById("how-it-works");
+      target?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }}
+    className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 px-8 py-4 text-base font-semibold transition-all duration-200 sm:w-auto"
+    style={{
+      borderColor: "rgba(255,255,255,0.92)",
+      color: "var(--secondary)",
+      background: "rgba(255,255,255,0.98)",
+    }}
+  >
+    See how it works
+  </button>
+</motion.div>
           
           </motion.div>
         </div>

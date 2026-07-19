@@ -1,6 +1,6 @@
 "use client";
 
-import { Loader2, Mail, Phone, Send, User,Bell } from "lucide-react";
+import { Loader2, Mail, Phone, Send, User, Bell } from "lucide-react";
 import { useState } from "react";
 import SuccessModal from "./SuccessModal";
 
@@ -28,7 +28,7 @@ export default function UserForm({ onSuccess }) {
     setMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

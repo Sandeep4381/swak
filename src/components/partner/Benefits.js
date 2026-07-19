@@ -16,36 +16,36 @@ import { motion } from "motion/react";
 const businessTypes = [
   {
     icon: Car,
-    title: "Vehicle Owners",
+    title: "Individual Vehicle Owners",
     description:
-      "Earn from your bikes, scooters and cars whenever they're available.",
+      "Earn additional income by renting your bikes, scooters, or cars whenever they're available.",
   },
   {
     icon: Store,
     title: "Rental Shops",
     description:
-      "Digitize your rental business and manage all your bookings from one platform.",
+      "Digitize your rental operations, manage bookings efficiently, and reach more local customers.",
   },
   {
     icon: BriefcaseBusiness,
     title: "Fleet Operators",
     description:
-      "Manage multiple vehicles, streamline operations and increase utilization.",
+      "Manage multiple vehicles, improve fleet utilization, and streamline operations from one platform.",
   },
   {
     icon: UsersRound,
     title: "Local Mobility Providers",
     description:
-      "Expand your customer reach and grow your business with Swarikaro.",
+      "Expand your customer base and grow your business with Swarikaro's location first rental marketplace.",
   },
 ];
 
 const benefits = [
   {
     icon: ChartNoAxesCombined,
-    title: "Complete Control",
+    title: "Complete Business Control",
     description:
-      "Manage pricing, availability, bookings and vehicle listings whenever you want.",
+      "Manage vehicle listings, pricing, bookings, and availability anytime.",
   },
   {
     icon: CalendarClock,
@@ -57,13 +57,13 @@ const benefits = [
     icon: IndianRupee,
     title: "Transparent Earnings",
     description:
-      "Track every booking, payment and settlement directly from the Partner App.",
+      "Track bookings, payments, commissions, and settlements directly from the Partner App.",
   },
   {
     icon: Headphones,
     title: "Dedicated Support",
     description:
-      "Our support team is here to help with onboarding, bookings and platform-related queries.",
+      "Receive assistance with onboarding, account management, and customer bookings whenever needed.",
   },
 ];
 
@@ -72,7 +72,7 @@ export function Benefits() {
     <section className="relative overflow-hidden py-16 sm:py-20 lg:py-18">
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-6">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -80,15 +80,20 @@ export function Benefits() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center"
         >
-<div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
-            <span className="h-px w-16  bg-orange-300" />
-          Partner Opportunities
-            <span className="h-px w-16 bg-orange-300" />
+<div className="flex items-center justify-center gap-2 text-base font-extrabold text-orange-500">
+            <span className="h-px w-16  bg-orange-500" />
+          PARTNER OPPORTUNTIES
+            <span className="h-px w-16 bg-orange-500" />
           </div>
           <h2 className="text-3xl mt-2 font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
-            Built for Every{" "}
-            <span className="text-primary">Mobility Business</span>
+           Built for Every Vehicle{" "}
+            <span className="text-primary">Rental Business</span>
           </h2>
+           <h4 className="mt-3 text-lg leading-8 text-slate-600">
+           Who Can Become a Swarikaro Partner?
+
+
+           </h4>
         </motion.div>
 
         <div className="mx-auto mt-10 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -126,6 +131,12 @@ export function Benefits() {
           <h2 className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
             Benefits <span className="text-primary">You'll Love</span>
           </h2>
+           <h4 className="mt-3 text-lg leading-8 text-slate-600">
+          Everything You Need to Grow
+
+
+
+           </h4>
         </motion.div>
 
         <div className="mx-auto mt-10 grid max-w-6xl gap-5 md:grid-cols-2">

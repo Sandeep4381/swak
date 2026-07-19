@@ -31,8 +31,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: `${SITE_NAME} | Apna Safar Apne Log`,
-    template: `%s | ${SITE_NAME}`,
+    default: "Swarikaro – Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+   
   },
 
   description: SITE_DESCRIPTION,
@@ -49,7 +49,7 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: `${SITE_NAME} | Apna Safar Apne Log`,
+    title: "Swarikaro – Vehicle Rental Platform in India | Rent Bikes, Cars & More",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -66,7 +66,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | Apna Safar Apne Log`,
+    title: "Swarikaro – Vehicle Rental Platform in India | Rent Bikes, Cars & More",
     description: SITE_DESCRIPTION,
     images: [OG_IMAGE_URL],
   },

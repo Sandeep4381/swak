@@ -7,7 +7,7 @@ About:
 https://swarikaro.com/about
 
 Partner:
-https://swarikaro.com/partner
+https://swarikaro.com/swarikaro-partner
 
 FAQ:
 https://swarikaro.com/faq

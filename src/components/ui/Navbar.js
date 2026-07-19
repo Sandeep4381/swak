@@ -11,14 +11,14 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Contact", href: "/contact" },
-  { name: "Become a Partner", href: "/partner" },
+  { name: "Become a Partner", href: "/swarikaro-partner" },
   { name: "FAQ", href: "/faq" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
-const isPartnerPage = pathname === "/partner";
+const isPartnerPage = pathname === "/swarikaro-partner";
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
@@ -38,8 +38,8 @@ const isPartnerPage = pathname === "/partner";
       {/* Logo */}
       <Link href="/" aria-label="Swarikaro home" className="flex items-center">
         <Image
-          src="/new_logo.svg"
-          alt="Swarikaro"
+          src="/logo.svg"
+          alt="Swarikaro App"
           width={160}
           height={60}
           priority

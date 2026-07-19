@@ -6,7 +6,7 @@ const mapIllustration = "/howSwarikaro/image-3.png";
 
 <Image
   src={mapIllustration}
-  alt="Swarikaro Location Based Search"
+  alt="Self Drive Vehicle Rental"
   width={500}
   height={800}
 />
@@ -32,13 +32,13 @@ const steps = [
   },
   {
     num: "04",
-    title: "Discover Available Vehicles.",
+    title: "Discover nearby rental vehicles.",
     desc: "Browse trusted options from local partners around your selected area.",
     emoji: "🚗",
   },
   {
     num: "05",
-    title: "Reserve for Today or Plan Ahead.",
+    title: "Book instantly or reserve for later.",
     desc: "Book for immediate travel or schedule your journey in advance.",
     emoji: "📅",
   },
@@ -50,7 +50,7 @@ const steps = [
   },
   {
     num: "07",
-    title: "Rate Your Journey & Earn Rewards.",
+    title: "Rate your experience and earn rewards.",
     desc: "Review your trip and vehicle, help fellow travellers make better choices, and receive rewards.",
     emoji: "⭐",
   },
@@ -106,17 +106,18 @@ const sectionRef = useRef(null);
         {/* section label */}
         <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
-            <span className="h-px w-16 bg-orange-300" />
-            How Swarikaro Works
-            <span className="h-px w-16 bg-orange-300" />
+            <span className="h-px w-16 bg-orange-500" />
+            HOW SWARIKARO WORKS
+            <span className="h-px w-16 bg-orange-500" />
           </div>
-         <h2 className="mt-2 text-4xl sm:text-5xl lg:text-3xl font-black leading-tight text-[#29566A] mb-4">
-            Finding the right vehicle should be{" "}
-           <span className="text-orange-500"> simple.
+         <h2 className="mt-3 text-4xl sm:text-5xl lg:text-3xl font-black leading-tight text-[#29566A] mb-4">
+           Find and Book Rental Vehicles in Just a 
+{" "}
+           <span className="text-orange-500">Few Steps.
             </span>
           </h2>
           <p className="mt-3 text-lg leading-8 text-slate-600">
-            Swarikaro helps you discover trusted mobility options around the location that matters to you and plan your journey with confidence.
+            Swarikaro makes discovering nearby rental vehicles simple using location based search and trusted mobility partners.
           </p>
         </div>
 

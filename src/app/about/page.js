@@ -10,9 +10,9 @@ import {
   OG_IMAGE_URL,
 } from "@/lib/metadata";
 export const metadata = {
-  title: "About Us | Swarikaro - Smart Vehicle Rental Platform",
+  title: "About Swarikaro | India's Smart Vehicle Rental Platform",
   description:
-    "Learn about Swarikaro, India's growing vehicle rental platform connecting vehicle owners, rental shops, and travelers. Discover our story, mission, vision, and how we're building a smarter mobility network.",
+    "Learn about Swarikaro, India's smart vehicle rental platform connecting travellers, vehicle owners and rental businesses. Discover our mission, story and vision for making mobility simple, trusted and accessible.",
 metadataBase: new URL(SITE_URL),
   keywords: [
     "About Swarikaro",
@@ -34,9 +34,9 @@ metadataBase: new URL(SITE_URL),
   ],
 
   openGraph: {
-    title: "About Swarikaro | Smart Vehicle Rental Platform",
+    title: "About Swarikaro | India's Smart Vehicle Rental Platform",
     description:
-      "Discover the story behind Swarikaro and how we're helping families, vehicle owners, rental shops, and travelers connect through a trusted mobility platform.",
+      "Learn about Swarikaro, India's smart vehicle rental platform connecting travellers, vehicle owners and rental businesses. Discover our mission, story and vision for making mobility simple, trusted and accessible.",
     url: `${SITE_URL}/about`,
     siteName: "Swarikaro",
     images: [
@@ -44,7 +44,7 @@ metadataBase: new URL(SITE_URL),
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "About Swarikaro",
+        alt: "Swarikaro - India's Smart Vehicle Rental Platform",
       },
     ],
     locale: "en_IN",
@@ -53,9 +53,9 @@ metadataBase: new URL(SITE_URL),
 
   twitter: {
     card: "summary_large_image",
-    title: "About Swarikaro",
+    title: "About Swarikaro | India's Smart Vehicle Rental Platform",
     description:
-      "Learn more about Swarikaro's journey, mission, and vision for building India's trusted vehicle rental network.",
+      "Learn about Swarikaro, India's smart vehicle rental platform connecting travellers, vehicle owners and rental businesses. Discover our mission, story and vision for making mobility simple, trusted and accessible.",
     images: [OG_IMAGE_URL],
   },
 

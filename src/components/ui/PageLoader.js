@@ -38,7 +38,7 @@ export default function PageLoader() {
 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-xl">
 <Image
   src="/assest/icon_logo.webp"
-  alt="Logo"
+  alt="Rent Cars Online"
   width={60}
   height={60}
   priority

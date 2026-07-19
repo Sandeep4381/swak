@@ -6,12 +6,26 @@ import Image from "next/image";
 const TEXTS = [
   "India's Trusted Platform"
 ];
+const SPLASH_CACHE_KEY = "swarikaro-splash-last-shown";
+const SPLASH_CACHE_MS = 10 * 60 * 1000;
 
 export default function SplashProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    const now = Date.now();
+    const lastShownRaw = window.localStorage.getItem(SPLASH_CACHE_KEY);
+    const lastShown = lastShownRaw ? Number(lastShownRaw) : 0;
+    const shouldShowSplash = !lastShown || now - lastShown >= SPLASH_CACHE_MS;
+
+    if (!shouldShowSplash) {
+      setLoading(false);
+      return;
+    }
+
+    window.localStorage.setItem(SPLASH_CACHE_KEY, String(now));
+
     const changeText = setInterval(() => {
       setIndex((prev) => {
         if (prev < TEXTS.length - 1) {
@@ -40,7 +54,7 @@ export default function SplashProvider({ children }) {
           <div className="logo-wrapper">
             <Image
               src="/logo.png"
-              alt="Swarikaro"
+              alt="Become a Swarikaro Partner"
               width={500}
               height={150}
               priority

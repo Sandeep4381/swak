@@ -5,44 +5,44 @@ import { Users, Smartphone, Car, TrendingUp, Shield } from "lucide-react";
 const benefits = [
   {
     icon: Users,
-    title: "Reach More Local Customers.",
+    title: "Reach More Customers.",
     description: "Connect with users searching for rental and reservation vehicles near your business location.",
   },
   {
     icon: Smartphone,
-    title: "Manage Everything from One App.",
-    description: "Accept bookings, manage vehicles, update availability, view earnings and grow your business with the Swarikaro Partner App.",
+    title: "Manage Everything in One App.",
+    description: "Accept bookings, update vehicle availability, track earnings, manage listings, and monitor your business using the Swarikaro Partner App.",
   },
   {
     icon: Car,
     title: "List Multiple Vehicles.",
-    description: "Whether you have one bike or an entire fleet, you can manage all your vehicles from a single account.",
+    description: "Whether you have one vehicle or an entire fleet, manage everything from a single dashboard.",
   },
   {
     icon: TrendingUp,
-    title: "Flexible Business Control.",
-    description: "Set your own pricing, manage availability, accept bookings and operate on your own schedule.",
+    title: "Complete Business Control.",
+    description: "Set your own pricing, manage availability, accept or decline bookings, and operate on your schedule.",
   },
   {
     icon: Shield,
-    title: "Earn More with Every Booking.",
-    description: "Turn idle vehicles into a steady source of income while expanding your customer reach.",
+    title: "Earn More",
+    description: "Increase your vehicle utilization and generate additional income by reaching more customers.",
   },
   {
     icon: TrendingUp,
-    title: "Trusted & Verified Platform.",
-    description: "Partner with a platform focused on verified users, secure onboarding and transparent business practices.",
+    title: "Trusted Platform.",
+    description: "Join a verified mobility platform that prioritizes secure onboarding, transparent operations, and trusted customer interactions",
   },
 ];
 
 export function WhyPartner() {
   return (
-    <section className="py-16 sm:py-20 lg:py-20 relative overflow-hidden">
+    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-18">
       {/* Background decoration */}
        <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,12 +50,22 @@ export function WhyPartner() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className=" text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
-            Why Partner With <span className="text-orange-500">Swarikaro ?</span>
+        <div className="flex items-center justify-center gap-2 text-base font-extrabold text-orange-500">
+            <span className="h-px w-16  bg-orange-500" />
+          WHY PARTNER WITH SWARIKARO
+            <span className="h-px w-16 bg-orange-500" />
+          </div>
+          <h2 className=" mt-3 text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
+           Grow Your Vehicle <span className="text-orange-500">Rental Business</span>
           </h2>
+         
+           <p className="mt-3 text-lg leading-8 text-slate-600">
+            Swarikaro Partner is built to help vehicle owners, rental businesses, and fleet operators reach more customers, simplify daily operations, and increase earnings.
+
+           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-6 lg:gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}

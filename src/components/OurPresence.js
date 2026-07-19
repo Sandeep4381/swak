@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import {
   CalendarCheck,
@@ -208,7 +209,7 @@ export default function OurPresence() {
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto hero-wrapper px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -217,20 +218,22 @@ export default function OurPresence() {
           className="text-center mb-14 lg:mb-20"
         >
          <div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
-            <span className="h-px w-16  bg-orange-300" />
-           Our Presence
-            <span className="h-px w-16 bg-orange-300" />
+            <span className="h-px w-16  bg-orange-500" />
+          GROWING ACROSS INDIA
+
+            <span className="h-px w-16 bg-orange-500" />
           </div>
-         <h2 className="mt-2 text-4xl sm:text-5xl lg:text-3xl font-black leading-tight text-[#29566A] mb-4">
-            Growing <span style={{ color: "var(--primary)" }}>Across India</span>
+         <h2 className="mt-3 text-4xl sm:text-5xl lg:text-3xl font-black leading-tight text-[#29566A] mb-4">
+           India's Growing Vehicle 
+ <span style={{ color: "var(--primary)" }}> Rental Network</span>
           </h2>
           <p
             className="text-lg leading-8 text-slate-600 sm:text-lg  mx-auto"   
 >
-            Swarikaro is building a reliable network of verified vehicle
-            partners across India. From major cities to emerging destinations,
-            our mission is to make finding the right vehicle simple,
-            transparent, and accessible - wherever your journey begins.
+           Swarikaro is building one of India's fastest-growing location-based vehicle rental platforms by connecting travellers with verified rental businesses and vehicle owners.
+         <br />  
+Our mission is to make vehicle rentals simple, transparent, and available wherever your journey begins.
+
           </p>
         </motion.div>
 
@@ -247,7 +250,7 @@ export default function OurPresence() {
             <div className="relative w-full" style={{ paddingBottom: "105%" }}>
               <Image
                 src="/map_real.webp"
-                alt="Swarikaro Presence Map"
+                alt="Self Drive Vehicle Rental"
                 fill
                 className="absolute inset-0 object-contain select-none"
                
@@ -407,25 +410,31 @@ export default function OurPresence() {
                   Currently Available
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {ACTIVE_CITIES.map((c) => (
-                    <motion.span
-                      key={c.name}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium"
-                      style={{
-                        background: "rgba(249,115,22,0.10)",
-                        color: "var(--secondary)",
-                        border: "1px solid rgba(249,115,22,0.25)",
-                      }}
-                      whileHover={{ y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <MapPin
-                        className="w-3 h-3"
-                        style={{ color: "var(--primary)" }}
-                      />
-                      {c.name}
-                    </motion.span>
-                  ))}
+                 {ACTIVE_CITIES.map((c) => (
+  <Link
+    key={c.name}
+    href={`https://en.wikipedia.org/wiki/${encodeURIComponent(c.name)}`}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <motion.span
+      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium cursor-pointer"
+      style={{
+        background: "rgba(249,115,22,0.10)",
+        color: "var(--secondary)",
+        border: "1px solid rgba(249,115,22,0.25)",
+      }}
+      whileHover={{ y: -2 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <MapPin
+        className="w-3 h-3"
+        style={{ color: "var(--primary)" }}
+      />
+      {c.name}
+    </motion.span>
+  </Link>
+))}
                 </div>
               </div>
               <div>
@@ -437,6 +446,12 @@ export default function OurPresence() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {EXPANDING_CITIES.map((c) => (
+                     <Link
+    key={c.name}
+    href={`https://en.wikipedia.org/wiki/${encodeURIComponent(c.name)}`}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
                     <motion.span
                       key={c.name}
                       className="inline-flex items-center gap-1.5 px-3 text-slate-600 py-1.5 rounded-full text-xs font-medium"
@@ -452,7 +467,9 @@ export default function OurPresence() {
                       <MapPin className="w-3 h-3" />
                       {c.name}
                     </motion.span>
+                     </Link>
                   ))}
+                   
                 </div>
               </div>
             </div>

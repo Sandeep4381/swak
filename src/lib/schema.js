@@ -67,7 +67,7 @@ export function buildWebSiteSchema() {
     "@type": "WebSite",
     name: SITE_NAME,
     url: SITE_URL,
-    description: "Rent Cars, Bikes & Scooters with Swarikaro",
+    description: " Swarikaro is India's location-first vehicle rental platform. Discover bikes, scooters, cars, buses and more from trusted local partners with smart radius search, advance booking and flexible rental options.",
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,

@@ -232,22 +232,22 @@ export default function FAQContent() {
                 </a>
 
                 <a
-                  href="tel:+91 9082069773"
+                  href="tel:+91 9065442523"
                   className="flex items-center gap-3 rounded-xl border border-orange-100 p-3 text-sm hover:bg-orange-50"
                 >
                   <Phone
                     size={18}
                     className="text-orange-500"
                   />
-                   +91 9082069773
+                   +91 9065442523
                 </a>
 
               </div>
 
-              <button className="mt-6 w-full rounded-xl bg-orange-500 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
-              <a
+              <button className="mt-6 w-full py-3 text-sm font-semibold ">
+             <a
   href="/contact"
-  className="mt-6 block w-full rounded-xl bg-orange-500 py-3 text-center text-sm font-semibold text-white transition hover:bg-orange-600"
+  className="mt-6 block w-full rounded-xl bg-orange-500 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:bg-[var(--secondary)]"
 >
   Contact Support
 </a>
