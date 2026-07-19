@@ -6,35 +6,35 @@ const steps = [
   {
     icon: UserPlus,
     step: "01",
-    title: "Register",
+    title: "Register as a Partner",
     description: "Download the Swarikaro Partner App and create your partner account.",
   },
   {
     icon: Bell,
     step: "02",
-    title: "Complete Verification",
-    description: "Submit your business details, shop information, vehicle documents and verification details.",
+    title: "Complete Verification Process",
+    description: "Complete business, vehicle, and identity verification.",
   },
   {
     icon: Calendar,
     step: "03",
-    title: "List Your Vehicles",
-    description: "Add your vehicles, set pricing, update availability and publish your listings.",
+    title: "List Your Vehicles and Set Availability",
+    description: "List your vehicles, upload photos, set pricing, and define availability..",
   },
   {
     icon: DollarSign,
     step: "04",
     title: "Start Receiving Bookings",
-    description: "Accept booking requests, hand over vehicles to customers and start earning through Swarikaro.",
+    description: "Receive booking requests, manage rentals, and start earning.",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section className="py-16 sm:py-20 lg:py-20 relative overflow-hidden">
+    <section id="how-it-works" className="relative overflow-hidden py-16 sm:py-20 lg:py-18">
       <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+ <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,12 +42,17 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className=" text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
-            How it <span className="text-orange-500">Works.</span>
+        <div className="flex items-center justify-center gap-2 text-base font-extrabold text-orange-500">
+            <span className="h-px w-16  bg-orange-500" />
+            HOW SWARIKARO PARTNER WORKS?
+            <span className="h-px w-16 bg-orange-500" />
+          </div>
+
+          <h2 className=" mt-3 text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
+          Start Earning With Swarikaro in Four 
+<span className="text-orange-500"> Simple Steps</span>
           </h2>
-          <p className="mt-3 text-lg leading-8 text-slate-600">
-            Start earning with Swarikaro in four simple steps
-          </p>
+       
         </motion.div>
 
         <div className="max-w-7xl mx-auto">

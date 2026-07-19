@@ -12,7 +12,7 @@ import {
 
 
 export const metadata = {
- title: `Contact Us | ${SITE_NAME}`,
+ title: "Contact Us | Swarikaro",
   description:
     "Get in touch with Swarikaro for support, partnerships, business enquiries, and mobility solutions across India.",
   metadataBase: new URL(SITE_URL),

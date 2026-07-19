@@ -22,8 +22,8 @@ const stats = [
 ];
 
 const features = [
-  { icon: Navigation, label: "Radius Search", short: "Radius", desc: "Find vehicles within your chosen radius", color: "#f97316" },
-  { icon: Clock, label: "Advance Booking", short: "Advance", desc: "Plan ahead, book up to 7 days early", color: "#ea580c" },
+  { icon: Navigation, label: "Smart Radius Search", short: "Radius", desc: "Find vehicles within your chosen radius", color: "#f97316" },
+  { icon: Clock, label: "Advance Vehicle Booking", short: "Advance", desc: "Plan ahead, book up to 7 days early", color: "#ea580c" },
   { icon: Users, label: "Growing Across India", short: "India", desc: "Expanding to 50+ cities nationwide", color: "#c2410c" },
 ];
 
@@ -130,7 +130,7 @@ export default function App() {
     leading-[1.09]
   
     text-[#29566A]
-    mt-16
+    mt-4
     
      text-[clamp(2rem,4vw,5.2rem)]
   "
@@ -149,9 +149,20 @@ export default function App() {
               </span>
             </h1>
 
-            <p className="text-base  mt-2 leading-relaxed mb-8 max-w-md" style={{ color: "#7a5c45" }}>
-              Search around your preferred location, plan ahead and discover trusted mobility solutions for every journey.
-            </p>
+           <p className="mt-3 text-lg leading-8 text-slate-600 mb-4">
+  Swarikaro is India's location first vehicle rental platform that helps you
+  discover bikes, scooters, cars, buses, and other rental vehicles around your
+  preferred location. Whether you need a self drive vehicle for a few hours or
+  want to plan your journey in advance, Swarikaro connects you with trusted
+  local mobility partners across India.{" "}
+  <Link
+    href="/swarikaro-partner"
+    
+  >
+    Become a Swarikaro Partner
+  </Link>{" "}
+  to grow your vehicle rental business with us.
+</p>
 
             {/* CTAs */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10 w-full">
@@ -178,7 +189,7 @@ export default function App() {
 
             {/* Feature chips */}
             {/* Feature chips */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-10">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-8">
               {features.map((f, i) => (
                 <button
                   key={f.short}
@@ -266,7 +277,7 @@ export default function App() {
                     <img
                       key={src}
                       src={src}
-                      alt="Swarikaro car and bike rental platform"
+                      alt="Swarikaro Self Drive Vehicle Rental"
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
                       style={{ opacity: phoneImg === i ? 0.45 : 0 }}
                     />

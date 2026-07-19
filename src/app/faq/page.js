@@ -11,7 +11,7 @@ import {
 } from "@/lib/metadata";
 import { FAQS } from "@/lib/faqs";
 export const metadata = {
-  title: "FAQ | Swarikaro - Frequently Asked Questions",
+ title: "FAQ - Frequently Asked Questions | Swarikaro",
   description:
     "Find answers to the most frequently asked questions about Swarikaro vehicle rentals, bookings, payments, vehicle owners, rental shops and customer support.",
   metadataBase: new URL(SITE_URL),
@@ -32,7 +32,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: `Frequently Asked Questions | ${SITE_NAME}`,
+    title: "Frequently Asked Question",
     description:
       "Everything you need to know about renting and listing vehicles on Swarikaro.",
     url: `${SITE_URL}/faq`,
@@ -50,7 +50,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: `Frequently Asked Questions | ${SITE_NAME}`,
+    title: "Frequently Asked Questions ",
     description: "Answers to common questions about Swarikaro rentals.",
     images: [OG_IMAGE_URL],
   },

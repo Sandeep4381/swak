@@ -1,13 +1,6 @@
 import { NextResponse } from "next/server";
 
-const REQUIRED_FIELDS = [
-  "name",
-  "mobile",
-  "city",
-  "state",
-  "vehicleType",
-  "vehicleCount",
-];
+const REQUIRED_FIELDS = ["name", "mobile", "email"];
 
 const clean = (value) => String(value || "").trim();
 
@@ -15,14 +8,11 @@ export async function POST(request) {
   try {
     const body = await request.json();
     const data = {
-      formType: "partner",
+      formType: "user",
       name: clean(body.name),
       mobile: clean(body.mobile),
-      city: clean(body.city),
-      state: clean(body.state),
-      vehicleType: clean(body.vehicleType),
-      vehicleCount: clean(body.vehicleCount),
-      notes: clean(body.notes),
+      email: clean(body.email),
+      message: clean(body.message),
     };
 
     const missingField = REQUIRED_FIELDS.find((field) => !data[field]);
@@ -40,24 +30,23 @@ export async function POST(request) {
       timeZone: "Asia/Kolkata",
     });
     const sheetWebhook =
-      process.env.GOOGLE_SHEET_WEBHOOK_PARTNER ||
+      process.env.GOOGLE_SHEET_WEBHOOK_USER ||
       process.env.GOOGLE_SHEET_WEBHOOK;
 
     if (sheetWebhook) {
       await fetch(sheetWebhook, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...data,
           submittedAt,
         }),
       });
     }
-    return NextResponse.json({ message: "Partner interest submitted." });
+
+    return NextResponse.json({ message: "User request submitted." });
   } catch (error) {
-    console.error("Partner interest mail error:", error);
+    console.error("User form mail error:", error);
 
     return NextResponse.json(
       { message: "Unable to send your request right now." },

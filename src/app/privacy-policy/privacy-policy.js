@@ -154,7 +154,7 @@ const policySections = [
     icon: Mail,
     points: [
       "Swarikaro",
-      "Email: karoswari@gmail.com",
+      "Email: support@swarikaro.com",
       " Dombivli East,Maharashtra, 421201, India",
     ],
   },

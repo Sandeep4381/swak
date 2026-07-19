@@ -13,58 +13,27 @@ import {
 const benefits = [
   {
     title: "Smart Radius Search.",
-    copy: "Find vehicles around your preferred location.",
+    copy: "Find bikes, scooters, cars, vans, buses, and other rental vehicles within your preferred search radius.",
     icon: MapPin,
   },
   {
     title: "Plan Ahead.",
-    copy: "Book days or weeks in advance for better planning.",
+    copy: "Reserve vehicles in advance for holidays, business trips, family travel, or weekend getaways.",
     icon: CalendarDays,
   },
   {
-    title: "More Choices.",
-    copy: "Multiple vehicles for every occasion and need.",
+    title: "More Vehicle Choices.",
+    copy: "Access a growing network of verified local vehicle rental partners offering flexible travel options.",
     icon: Car,
   },
   {
     title: "Better Travel Experience.",
-    copy: "Designed for flexibility, comfort and trust.",
+    copy: "A modern vehicle rental app designed for convenience, flexibility, transparency, and trust.",
     icon: Route,
   },
 ];
 
-function FeatureCard({ item, index }) {
-  const Icon = item.icon;
 
-  return (
-    <div
-      className={`relative flex flex-col items-center text-center px-6 ${index !== 0 ? "lg:border-l border-orange-100" : ""
-        }`}
-    >
-      {/* Icon */}
-
-      <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full border border-orange-100 bg-orange-50/40">
-        <Icon
-          size={38}
-          className="text-orange-500"
-          strokeWidth={2}
-        />
-      </div>
-
-      {/* Title */}
-
-      <h3 className="text-2xl font-bold leading-tight text-[#29566A]">
-        {item.title}
-      </h3>
-
-      {/* Description */}
-
-      <p className="mt-5 max-w-[220px] text-lg leading-8 text-slate-600">
-        {item.copy}
-      </p>
-    </div>
-  );
-}
 
 export default function WhySwarikaro() {
   return (
@@ -85,7 +54,7 @@ export default function WhySwarikaro() {
 
         {/* Top Layout */}
 
-        <div className="grid gap-10 lg:grid-cols-[42%_58%] xl:grid-cols-[45%_55%] items-center">
+        <div className="grid gap-10 lg:grid-cols-[42%_58%] xl:grid-cols-[43%_60%] items-center">
 
 
           <div className="hidden lg:flex relative justify-center lg:justify-start">
@@ -167,7 +136,7 @@ export default function WhySwarikaro() {
 
             <Image
               src="/whySwarikaro/why.webp"
-              alt="Swarikaro Location Based Search"
+              alt="Rent bike near me "
               width={720}
               height={720}
               priority
@@ -203,9 +172,9 @@ export default function WhySwarikaro() {
   "
           >
  <div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
-            <span className="h-px w-16  bg-orange-300" />
-         Why Swarikaro ?
-            <span className="h-px w-16 bg-orange-300" />
+            <span className="h-px w-16  bg-orange-500" />
+         WHY SWARIKARO ?
+            <span className="h-px w-16 bg-orange-500" />
           </div>
           
 
@@ -221,8 +190,7 @@ export default function WhySwarikaro() {
 
 
             <p className="mt-3 text-lg leading-8 text-slate-600">
-              Most platforms ask you to choose a city and show limited options.
-              Swarikaro helps you search the exact place that matters to you
+             Unlike traditional vehicle rental platforms that only let you search by city, Swarikaro helps you discover rental vehicles around the exact location that matters to you whether it's your destination, hotel, workplace, railway station, airport, or home.
             </p>
 
             <div
@@ -244,8 +212,8 @@ export default function WhySwarikaro() {
                     key={item.title}
                     className={`
     flex flex-col items-center text-center
-    px-3 py-2
-    min-w-[140px]
+    px-4 py-2
+    
     flex-1
     ${index !== 0 ? "lg:border-l lg:border-orange-100" : ""}
   `}
@@ -293,7 +261,7 @@ export default function WhySwarikaro() {
 
             <div className="text-center">
               <h4 className="text-2xl font-black text-slate-600">
-                Location-First
+                Location First
               </h4>
 
               <p className="mt-2 text-sm font-medium text-slate-600">

@@ -23,12 +23,15 @@ import {
 
 
 const rentalFeatures = [
-  { icon: CalendarCheck, text: "Advance Booking" },
-  { icon: MapPin, text: "Destination & Stay Search" },
-  { icon: CalendarDays, text: "Hourly, Daily, Weekly & Monthly" },
-  { icon: Car, text: "Bike, Scooter, Car, Bus & More" },
-  { icon: UsersRound, text: "Family Tours & Business" },
-  { icon: ShieldCheck, text: "Trusted Local Partners" },
+  { icon: CalendarCheck, text: "Hourly Rentals" },
+  { icon: MapPin, text: "Daily Rentals" },
+  { icon: CalendarDays, text: "Weekly Rentals" },
+   { icon: CalendarDays, text: "Monthly Rentals" },
+  { icon: Car, text: "Family Trips" },
+  { icon: UsersRound, text: "Business Travel" },
+  { icon: ShieldCheck, text: "Tourism" },
+    { icon: ShieldCheck, text: "Weekend Getaways" },
+      { icon: ShieldCheck, text: "Long Distance Travel" },
 ];
 const reservationFeatures = [
   { icon: UserRoundCheck, text: "Driver Included" },
@@ -41,10 +44,10 @@ const reservationFeatures = [
 ];
 
 const trustItems = [
-  { icon: ShieldCheck, title: "Safe & Reliable", copy: "Verified vehicles & trusted partners" },
-  { icon: IndianRupee, title: "Best Price Guarantee", copy: "Transparent pricing, no hidden fees" },
-  { icon: Headphones, title: "24×7 Support", copy: "We're here whenever you need us" },
-  { icon: ThumbsUp, title: "Trusted by Thousands", copy: "Happy customers across India" },
+  { icon: ShieldCheck, title: "Safe & Reliable", copy: "Verified vehicle rental partners and trusted local businesses." },
+  { icon: IndianRupee, title: "Best Price Guarantee", copy: "Transparent pricing with no hidden charges." },
+  { icon: Headphones, title: "Customer Support", copy: "Dedicated support whenever you need assistance." },
+  { icon: ThumbsUp, title: "Growing Community", copy: "Helping travellers discover reliable rental vehicles across India." },
 ];
 
 function FeatureChip({ icon: Icon, text }) {
@@ -98,18 +101,18 @@ export default function CoreServices() {
         {/* Heading */}
         <div className="text-center ">
            <div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
-            <span className="h-px w-16  bg-orange-300" />
-           Our Core Services
-            <span className="h-px w-16 bg-orange-300" />
+            <span className="h-px w-16  bg-orange-500" />
+         OUR CORE SERVICES
+            <span className="h-px w-16 bg-orange-500" />
           </div>
-         <h2 className="mt-2 text-4xl sm:text-5xl lg:text-3xl font-black leading-tight text-[#29566A] mb-4">
-            Travel Your Way. <span className="text-orange-500">We're With You.</span>
+         <h2 className="mt-3 text-4xl sm:text-5xl lg:text-3xl font-black leading-tight text-[#29566A] mb-4">
+            Travel Your Way <span className="text-orange-500">with Swarikaro.</span>
           </h2>
              <p
             className="text-lg leading-8 text-slate-600 sm:text-lg  mx-auto"   
 >
-            From self-drive rentals to chauffeur-led reservations — premium mobility built
-            around your plans, your pace and your people.
+          Swarikaro offers flexible vehicle rental solutions for individuals, families, tourists, professionals, and businesses. Discover trusted vehicles from verified partners and enjoy a seamless booking experience.
+
           </p>
         </div>
 
@@ -140,8 +143,8 @@ export default function CoreServices() {
                 Plan today for the journeys of tomorrow.
               </h4>
               <p className="mt-2 text-[13.5px] leading-relaxed text-slate-600">
-                Book rental vehicles in advance and search around your destination or stay
-                location.
+               Book bikes, scooters, cars, vans, buses, and more directly from trusted rental partners.
+
               </p>
                 <div className="my-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground/70">
                 <span className="h-px flex-1 bg-gradient-to-r from-transparent to-border" />
@@ -217,8 +220,8 @@ export default function CoreServices() {
               <h3 className="mt-5 text-2xl font-bold text-white sm:text-3xl">More Services</h3>
               <p className="mt-1 text-2xl font-bold text-[var(--brand)]">Coming Soon</p>
               <p className="mt-3 text-[13.5px] leading-relaxed text-white/80">
-                We are constantly working to bring you more travel solutions that make every
-                journey easier, safer and better.
+               We're continuously expanding Swarikaro with new mobility services to make travel simpler, smarter, and more accessible across India.
+
               </p>
               <button className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md ring-1 ring-white/30 transition-all hover:bg-white hover:text-foreground">
                 Stay Tuned <Sparkles className="h-3.5 w-3.5" />

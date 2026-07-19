@@ -13,7 +13,7 @@ const REQUIRED_FIELDS = [
 
 const clean = (value) => String(value || "").trim();
 const escapeHtml = (value) =>
-  value
+  String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
@@ -24,6 +24,7 @@ export async function POST(request) {
   try {
     const body = await request.json();
     const data = {
+      formType: "contact",
       name: clean(body.name),
       mobile: clean(body.mobile),
       email: clean(body.email),
@@ -75,7 +76,7 @@ export async function POST(request) {
 
     await transporter.sendMail({
       from: `"Swarikaro Contact Form" <${user}>`,
-      to: "swarikaro@gmail.com",
+      to: "support@swarikaro.com",
       replyTo: data.email,
       subject: `New Swarikaro ${data.inquiryType} enquiry - ${data.subject}`,
       text: [
@@ -90,7 +91,9 @@ export async function POST(request) {
         `Message: ${data.message}`,
         "Privacy and Terms Consent: Yes",
         `Submitted At: ${submittedAt}`,
-      ].join("\n"),
+      ]
+        .filter(Boolean)
+        .join("\n"),
       html: `
         <div style="font-family:Arial,sans-serif;line-height:1.6;color:#17394a">
           <h2 style="color:#f97316">New Swarikaro Contact Enquiry</h2>
@@ -109,6 +112,29 @@ export async function POST(request) {
       `,
     });
 
+    const sheetWebhook = process.env.GOOGLE_SHEET_WEBHOOK;
+
+   if (sheetWebhook) {
+  try {
+    const response = await fetch(sheetWebhook, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...data,
+        submittedAt,
+      }),
+    });
+
+    const text = await response.text();
+
+    console.log("Sheet Status:", response.status);
+    console.log("Sheet Response:", text);
+  } catch (err) {
+    console.error("Google Sheet Error:", err);
+  }
+}
     return NextResponse.json({ message: "Contact enquiry submitted." });
   } catch (error) {
     console.error("Contact mail error:", error);

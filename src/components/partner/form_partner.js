@@ -29,6 +29,7 @@ const initialForm = {
   state: "",
   vehicleType: "",
   vehicleCount: "",
+  notes: "",
 };
 
 const indianStates = [
@@ -180,7 +181,7 @@ export function PartnerInterestForm({
       {!modal && (
         <section
           id="partner-interest"
-          className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
+          className="relative overflow-hidden py-16 sm:py-20 lg:py-18"
         >
           <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
 
@@ -193,13 +194,18 @@ export function PartnerInterestForm({
                 transition={{ duration: 0.5 }}
                 className="max-w-2xl"
               >
-                <h2 className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
-                  Grow Your Vehicle Business With{" "}
-                  <span className="text-primary">Swarikaro</span>
-                </h2>
-
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-base font-extrabold text-orange-500">
+  <span className="h-px w-16 bg-orange-500" />
+  PARTNER REGISTRATION
+  <span className="h-px w-16 bg-orange-500" />
+</div>
+<h2 className="mt-3 text-center text-3xl font-bold leading-[1.1] text-foreground sm:text-center sm:text-4xl lg:text-left lg:text-5xl">
+  JOIN SWARIKARO{" "}
+  <span className="text-orange-500">PARTNER</span>
+</h2>
+         
                 <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
-                  Connect with travelers planning their journeys in advance.
+                 Share your details and our onboarding team will guide you through the registration and verification process.
                 </p>
 
                 <div className="mt-8">
@@ -388,6 +394,21 @@ function PartnerFormCard({
             className="w-full h-12 rounded-lg border border-border bg-white px-4 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
           />
         </label>
+
+        <label className="block sm:col-span-2">
+          <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-600">
+            <Headphones className="h-4 w-4 text-primary" />
+            Notes <span className="font-normal text-slate-400">(optional)</span>
+          </span>
+          <textarea
+            name="notes"
+            value={form.notes}
+            onChange={updateField}
+            rows={3}
+            placeholder="Add any extra notes here"
+            className="w-full rounded-lg border border-border bg-white px-4 py-3 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+          />
+        </label>
       </div>
 
       <button
@@ -405,7 +426,9 @@ function PartnerFormCard({
               <ArrowRight className="h-5 w-5" />
             </>}
       </button>
-
+<p className="text-xs text-slate-600 text-center mt-2">
+                By submitting, you agree to Swarikaro's partner terms & privacy policy.
+              </p>
       {message && (
         <p
           className={`mt-4 rounded-lg px-4 py-3 text-sm font-semibold ${

@@ -10,16 +10,18 @@ import {
   OG_IMAGE_URL,
 } from "@/lib/metadata";
 import { Benefits } from "@/components/partner/Benefits";
+import { Earlyprogram } from "@/components/partner/Earlyprogram";
 import { PartnerFaq } from "@/components/partner/faq_partner";
 import { PartnerInterestForm } from "@/components/partner/form_partner";
 import { Hero } from "@/components/partner/Hero_part";
+import {WhyBusinessChoseSwarikaro} from "@/components/partner/why_business_chose_swarikaro";
 import { HowItWorks } from "@/components/partner/HowWorks";
 import { WhyPartner } from "@/components/partner/WhyPartner";
 
 export const metadata = {
-  title: "Become a Partner | Swarikaro",
+  title: "Become a Swarikaro Partner | Grow Your Vehicle Rental Business",
   description:
-    "Partner with Swarikaro and earn by listing your vehicle. Join our growing network of trusted mobility partners across India.",
+    "Become a Swarikaro Partner and grow your vehicle rental business. List bikes, scooters, cars, and fleets, manage bookings, track earnings, and connect with customers through the Swarikaro Partner App.",
   metadataBase: new URL(SITE_URL),
     keywords: [
   "Swarikaro Partner",
@@ -35,10 +37,10 @@ export const metadata = {
 ],
   metadataBase: new URL(SITE_URL),
   openGraph: {
-    title: `Become a Partner | ${SITE_NAME}`,
+    title: "Become a Swarikaro Partner | Grow Your Vehicle Rental Business",
     description:
-      "Turn your vehicle into an earning opportunity. Join Swarikaro's trusted partner network.",
-    url: `${SITE_URL}/partner`,
+      "Become a Swarikaro Partner and grow your vehicle rental business. List bikes, scooters, cars, and fleets, manage bookings, track earnings, and connect with customers through the Swarikaro Partner App.",
+    url: `${SITE_URL}/swarikaro-partner`,
 siteName: SITE_NAME,
 
     images: [
@@ -54,13 +56,13 @@ siteName: SITE_NAME,
   },
   twitter: {
     card: "summary_large_image",
-    title: `Become a Partner | ${SITE_NAME}`,
+    title: "Become a Swarikaro Partner | Grow Your Vehicle Rental Business",
     description:
-      "List your vehicle on Swarikaro and start earning with trusted rentals.",
+      "Become a Swarikaro Partner and grow your vehicle rental business. List bikes, scooters, cars, and fleets, manage bookings, track earnings, and connect with customers through the Swarikaro Partner App.",
   images: [OG_IMAGE_URL],
   },
   alternates: {
-     canonical: `${SITE_URL}/partner`,
+     canonical: `${SITE_URL}/swarikaro-partner`,
   },
  robots: {
   index: true,
@@ -78,13 +80,13 @@ siteName: SITE_NAME,
 export default function App() {
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", item: SITE_URL },
-  { name: "Partner", item: `${SITE_URL}/partner` },
+  { name: "Partner", item: `${SITE_URL}/swarikaro-partner` },
 ]);
   const serviceSchema = buildServiceSchema({
-    name: "Swarikaro Partner Program",
+    name: "Become a Swarikaro Partner | Grow Your Vehicle Rental Business",
     description:
-      "List your vehicle on Swarikaro, manage bookings and grow your vehicle business with trusted mobility customers.",
-    url: `${SITE_URL}/partner`,
+      "Become a Swarikaro Partner and grow your vehicle rental business. List bikes, scooters, cars, and fleets, manage bookings, track earnings, and connect with customers through the Swarikaro Partner App.",
+    url: `${SITE_URL}/swarikaro-partner`,
     areaServed: "India",
   });
   const faqSchema = buildFaqSchema([
@@ -120,10 +122,13 @@ const breadcrumbSchema = buildBreadcrumbSchema([
      <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Hero />
-        <PartnerInterestForm modal={false} />
+       
         <WhyPartner />
+        <Earlyprogram/>
+         <PartnerInterestForm modal={false} />
         <HowItWorks />
         <Benefits />
+        <WhyBusinessChoseSwarikaro/>
         <PartnerFaq />
       </div>
     </>

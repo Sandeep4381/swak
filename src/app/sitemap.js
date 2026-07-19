@@ -3,7 +3,7 @@ const routes = [
   "/about",
   "/contact",
   "/faq",
-  "/partner",
+  "/swarikaro-partner",
   "/privacy-policy",
   "/terms-and-condition",
 ];
