@@ -43,7 +43,15 @@ export const metadata = {
     canonical: SITE_URL,
   },
 
- icons: {
+icons: {
+  icon: [
+    {
+      url: "/icon.png",
+      type: "image/png",
+      sizes: "512x512",
+    },
+  ],
+
   shortcut: "/favicon.ico",
   apple: "/apple-touch-icon.png",
 },
