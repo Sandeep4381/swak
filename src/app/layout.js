@@ -43,11 +43,10 @@ export const metadata = {
     canonical: SITE_URL,
   },
 
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+ icons: {
+  shortcut: "/favicon.ico",
+  apple: "/apple-touch-icon.png",
+},
   openGraph: {
     title: "Swarikaro – Vehicle Rental Platform in India | Rent Bikes, Cars & More",
     description: SITE_DESCRIPTION,
