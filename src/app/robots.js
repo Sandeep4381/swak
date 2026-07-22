@@ -14,7 +14,7 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://swarikaro.com/sitemap.xml",
-    host: "https://swarikaro.com",
+    sitemap: "https://swarikaro.com/sitemap.xml"
+    
   };
 }
