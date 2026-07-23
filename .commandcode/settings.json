@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(node -e \"try{require.resolve('typescript');console.log('found at',require.resolve('typescript'))}catch(e){console.log('NOT found')}\")",
+      "Shell(npx next build 2>&1)",
+      "Shell(npx -p typescript tsc --version 2>&1)",
+      "Shell(node --max-old-space-size=4096 ./node_modules/next/dist/bin/next build --no-lint 2>&1)",
+      "Shell(npm:*)",
+      "Shell(node -e \"console.log(require('typescript/package.json').version)\")",
+      "Shell(ls:*)",
+      "Shell(dir:*)",
+      "powershell",
+      "Shell(rmdir:*)",
+      "Shell(del:*)",
+      "Shell(node -e \"console.log(require.resolve('typescript'))\" 2>&1)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

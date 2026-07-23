@@ -1,0 +1,6 @@
+- Always keep a `tsconfig.json` file present in Next.js projects using TypeScript to prevent Next.js from attempting to auto-install TypeScript on every dev start. If `.ts`/`.tsx` files exist but `tsconfig.json` is missing, Next.js will repeatedly error and try to install TypeScript. Confidence: 0.9
+- Preserve existing UI patterns, theme colors, and styling when adding new features — do not change the UI of existing pages. New components should match the current theme (colors, navbar, typography, spacing) rather than introducing new visual styles. Confidence: 0.8
+- Prefer internal site routes over external references (e.g., Wikipedia) when creating links for project content that has its own pages. City/location links should point to actual site pages, not external sources. Confidence: 0.7
+- Prefers city pages without breadcrumb navigation — keep the top-left area of inner pages clean and free of "Home / CityName" breadcrumbs. Confidence: 0.8
+- Prefers applying the main page hero background consistently across all sections of a page rather than using different backgrounds per section. The hero gradient should flow through the entire page for visual consistency. Confidence: 0.8
+- Communicates in Hinglish (Hindi/English mixed) — understands and responds well to queries written in a blend of Hindi and English. Confidence: 0.9

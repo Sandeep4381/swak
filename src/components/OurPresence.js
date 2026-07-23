@@ -413,9 +413,7 @@ Our mission is to make vehicle rentals simple, transparent, and available wherev
                  {ACTIVE_CITIES.map((c) => (
   <Link
     key={c.name}
-    href={`https://en.wikipedia.org/wiki/${encodeURIComponent(c.name)}`}
-    target="_blank"
-    rel="noopener noreferrer"
+    href={`/${c.name.toLowerCase()}`}
   >
     <motion.span
       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium cursor-pointer"
@@ -448,9 +446,7 @@ Our mission is to make vehicle rentals simple, transparent, and available wherev
                   {EXPANDING_CITIES.map((c) => (
                      <Link
     key={c.name}
-    href={`https://en.wikipedia.org/wiki/${encodeURIComponent(c.name)}`}
-    target="_blank"
-    rel="noopener noreferrer"
+    href={`/${c.name.toLowerCase()}`}
   >
                     <motion.span
                       key={c.name}
