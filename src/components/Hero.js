@@ -9,9 +9,9 @@ import ComingSoonButton from "./ui/comingsoon";
 
 /* ─── City images that cycle inside the phone ─── */
 const phoneImages = [
-  "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&h=1100&fit=crop&auto=format",
-  "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=600&h=1100&fit=crop&auto=format",
-  "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&h=1100&fit=crop&auto=format",
+  "/hero/hero_1.jpg",
+  "/hero/hero_2.jpg",
+  "/hero/hero_3.jpg",
 ];
 
 const stats = [

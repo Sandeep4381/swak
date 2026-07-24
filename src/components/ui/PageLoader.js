@@ -44,8 +44,8 @@ export default function PageLoader() {
   priority
   className="rounded-full"
   style={{
-    width: "60px",
-    height: "auto",
+    width: 'auto',
+    height: 'auto',
     animation: "spin 1s linear infinite reverse",
   }}
 />

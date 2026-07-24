@@ -252,9 +252,8 @@ Our mission is to make vehicle rentals simple, transparent, and available wherev
                 src="/map_real.webp"
                 alt="Self Drive Vehicle Rental"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="absolute inset-0 object-contain select-none"
-               
-               
               />
 
               <div

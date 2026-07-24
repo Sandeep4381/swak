@@ -9,7 +9,7 @@ This document defines the Git workflow for the **Swarikaro Website**. Every deve
 **GitHub Repository Production**
 
 ```
-https://github.com/mystrymindinnovations/swarikaro-web.git
+ git remote set-url origin https://github.com/mystrymindinnovations/swarikaro-web.git
 ```
 
 ---

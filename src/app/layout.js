@@ -31,7 +31,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Swarikaro – Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+    default: "Swarikaro Vehicle Rental Platform in India | Rent Bikes, Cars & More",
    
   },
 
@@ -45,18 +45,25 @@ export const metadata = {
 
 icons: {
   icon: [
-    {
-      url: "/icon.png",
-      type: "image/png",
-      sizes: "512x512",
-    },
+
+    { url: "/favicon-16x16.ico", sizes: "16x16", type: "ico" },
+    { url: "/favicon-32x32.ico", sizes: "32x32", type: "ico" },
+    { url: "/icon.png", sizes: "192x192", type: "image/png" },
+    { url: "/icon.png", sizes: "512x512", type: "image/png" },
+
   ],
 
   shortcut: "/favicon.ico",
   apple: "/apple-touch-icon.png",
+  other: [
+    {
+      rel: "apple-touch-icon-precomposed",
+      url: "/apple-touch-icon.png",
+    },
+  ],
 },
   openGraph: {
-    title: "Swarikaro – Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+    title: "Swarikaro Vehicle Rental Platform in India | Rent Bikes, Cars & More",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -73,7 +80,7 @@ icons: {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Swarikaro – Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+    title: "Swarikaro Vehicle Rental Platform in India | Rent Bikes, Cars & More",
     description: SITE_DESCRIPTION,
     images: [OG_IMAGE_URL],
   },

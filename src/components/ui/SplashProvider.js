@@ -59,7 +59,7 @@ export default function SplashProvider({ children }) {
               height={150}
               priority
               className="splash-logo"
-              style={{ height: 'auto' }}
+              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
 
