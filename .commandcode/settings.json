@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(npm:*)",
+      "Shell(rm:*)",
+      "powershell",
+      "Shell(if:*)",
+      "Shell(powershell -Command \"try { $r = Invoke-WebRequest -Uri 'http://localhost:3000' -UseBasicParsing -TimeoutSec 15; Write-Output ('Status: ' + $r.StatusCode) } catch { Write-Output ('Error: ' + $_.Exception.Message) }\")",
+      "Shell(powershell -Command \"Start-Sleep -Seconds 3; try { $r = Invoke-WebRequest -Uri 'http://localhost:3000' -UseBasicParsing -TimeoutSec 10; Write-Output ('Status: ' + $r.StatusCode + ', Length: ' + $r.Content.Length) } catch { Write-Output ('Error: ' + $_.Exception.Message) }\" 2>&1)",
+      "Shell(type:*)",
+      "Shell(dir:*)",
+      "Shell(rmdir /s /q node_modules\\@tailwindcss 2>nul && npm install @tailwindcss/postcss@latest --no-prefer-offline 2>&1)",
+      "Shell(Remove-Item:*)",
+      "Shell(rmdir /s /q node_modules 2>nul && del package-lock.json 2>nul && npm install 2>&1)",
+      "Shell(set:*)",
+      "Shell(set NODE_ENV=development && rmdir /s /q .next 2>nul && npm run dev 2>&1)",
+      "Shell(powershell -Command \"Start-Sleep -Seconds 3; try { $r = Invoke-WebRequest -Uri 'http://localhost:3000' -UseBasicParsing -TimeoutSec 10; Write-Output ('Status: ' + $r.StatusCode + ', Length: ' + $r.Content.Length) } catch { $_.Exception.Message }\" 2>&1)",
+      "Shell(powershell -Command \"Start-Sleep -Seconds 10; try { $r = Invoke-WebRequest -Uri 'http://localhost:3000/swarikaro-partner' -UseBasicParsing -TimeoutSec 15; Write-Output ('Status: ' + $r.StatusCode + ', Length: ' + $r.Content.Length) } catch { $_.Exception.Message }\" 2>&1)",
+      "Shell(powershell -Command \"try { $r = Invoke-WebRequest -Uri 'http://localhost:3000/' -UseBasicParsing -TimeoutSec 30; Write-Output ('Home Status: ' + $r.StatusCode + ', Length: ' + $r.Content.Length) } catch { 'Home Error: ' + $_.Exception.Message } ; try { $r = Invoke-WebRequest -Uri 'http://localhost:3000/about' -UseBasicParsing -TimeoutSec 15; Write-Output ('About Status: ' + $r.StatusCode + ', Length: ' + $r.Content.Length) } catch { 'About Error: ' + $_.Exception.Message } ; try { $r = Invoke-WebRequest -Uri 'http://localhost:3000/contact' -UseBasicParsing -TimeoutSec 15; Write-Output ('Contact Status: ' + $r.StatusCode + ', Length: ' + $r.Content.Length) } catch { 'Contact Error: ' + $_.Exception.Message }\" 2>&1)",
+      "Shell(rmdir /s /q .next 2>nul & set NODE_ENV=development && npm run dev 2>&1)",
+      "Shell(netstat:*)",
+      "Shell(findstr:*)",
+      "Shell(taskkill /PID 724 /F 2>nul & taskkill /PID 8840 /F 2>nul)",
+      "Shell(powershell -Command \"Start-Sleep -Seconds 5; try { $r = Invoke-WebRequest -Uri 'http://localhost:3000/' -UseBasicParsing -TimeoutSec 15; Write-Output ('Home: ' + $r.StatusCode + ', ' + $r.Content.Length + ' bytes') } catch { $_.Exception.Message } ; try { $r = Invoke-WebRequest -Uri 'http://localhost:3000/swarikaro-partner' -UseBasicParsing -TimeoutSec 15; Write-Output ('Partner: ' + $r.StatusCode + ', ' + $r.Content.Length + ' bytes') } catch { $_.Exception.Message }\" 2>&1)",
+      "Shell(taskkill /PID 3888 /F 2>nul & netstat -ano | findstr \"3001\")",
+      "Shell(powershell -Command \"try { $r = Invoke-WebRequest -Uri 'http://localhost:3000/swarikaro-partner' -UseBasicParsing -TimeoutSec 15; Write-Output ('Status: ' + $r.StatusCode + ', Length: ' + $r.Content.Length) } catch { $_.Exception.Message }\" 2>&1)",
+      "Shell(git:*)",
+      "Shell(del src\\app\\HomeContent.js 2>nul)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

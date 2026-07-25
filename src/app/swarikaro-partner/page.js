@@ -9,14 +9,7 @@ import {
   SITE_URL,
   OG_IMAGE_URL,
 } from "@/lib/metadata";
-import { Benefits } from "@/components/partner/Benefits";
-import { Earlyprogram } from "@/components/partner/Earlyprogram";
-import { PartnerFaq } from "@/components/partner/faq_partner";
-import { PartnerInterestForm } from "@/components/partner/form_partner";
-import { Hero } from "@/components/partner/Hero_part";
-import {WhyBusinessChoseSwarikaro} from "@/components/partner/why_business_chose_swarikaro";
-import { HowItWorks } from "@/components/partner/HowWorks";
-import { WhyPartner } from "@/components/partner/WhyPartner";
+import PartnerContent from "./PartnerContent";
 
 export const metadata = {
   title: "Become a Swarikaro Partner | Grow Your Vehicle Rental Business",
@@ -126,17 +119,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   return (
     <>
      <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
-      <div className="min-h-screen bg-background overflow-x-hidden">
-        <Hero />
-       
-        <WhyPartner />
-        <Earlyprogram/>
-         <PartnerInterestForm modal={false} />
-        <HowItWorks />
-        <Benefits />
-        <WhyBusinessChoseSwarikaro/>
-        <PartnerFaq />
-      </div>
+      <PartnerContent />
     </>
   );
 }

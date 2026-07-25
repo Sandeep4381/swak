@@ -50,7 +50,10 @@ icons: {
     { url: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.svg", sizes: "16x16", type: "image/svg+xml" },
     { url: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.svg", sizes: "32x32", type: "image/svg+xml" },
   ],
-  shortcut: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.ico",
+
+  shortcut: "/favicon.ico",
+
+
   apple: "/apple-touch-icon.png",
   other: [
     {
@@ -121,6 +124,14 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable}`}>
+
+      <head>
+        <link rel="preconnect" href="https://ik.imagekit.io" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://ik.imagekit.io" />
+      </head>
+
       <body>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-9ZHSK1059R"

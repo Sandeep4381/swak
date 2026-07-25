@@ -87,7 +87,7 @@ export default function FAQContent() {
 
 <div className="flex justify-center lg:justify-end lg:translate-x-16">
   <Image
-    src="/faq/faq_boy.webp"
+    src="https://ik.imagekit.io/swarikaro4/Swarikar_website/faq/faq_boy.webp?updatedAt=1785008441431"
     alt="Swarikaro FAQ Illustration with a person holding a question mark"
     width={420}
     height={500}

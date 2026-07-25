@@ -10,15 +10,13 @@ import ComingSoonButton from "./ui/comingsoon";
 
 /* ─── City images that cycle inside the phone ─── */
 const phoneImages = [
-<<<<<<< HEAD
+
+
   "https://ik.imagekit.io/swarikaro4/Swarikar_website/home/hero_1.jpg?updatedAt=1785009827651",
   "https://ik.imagekit.io/swarikaro4/Swarikar_website/home/hero_2.jpg?updatedAt=1785009827548",
   "https://ik.imagekit.io/swarikaro4/Swarikar_website/home/hero_3.jpg?updatedAt=1785009827548",
-=======
-  "/hero/hero_1.jpg",
-  "/hero/hero_2.jpg",
-  "/hero/hero_3.jpg",
->>>>>>> 345955928cfd484754e62b254a50b3dc8f8bf504
+
+
 ];
 
 const stats = [
