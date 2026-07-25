@@ -21,7 +21,7 @@ export function Hero() {
         style={{ background: BG }}
       >
         <img
-          src="/partner/bg-l.webp"
+          src="https://ik.imagekit.io/swarikaro4/Swarikar_website/partner/bg-l.webp?updatedAt=1785011177935"
           alt="Become a Swarikaro Partner"
           aria-hidden="true"
           className="absolute right-0 top-0 h-full w-auto max-w-none"
@@ -52,7 +52,7 @@ export function Hero() {
       {/* ── MOBILE / TABLET: portrait image full-bg ── */}
       <div className="absolute inset-0 z-0 lg:hidden">
         <img
-          src="/partner/bg-m.webp"
+          src="https://ik.imagekit.io/swarikaro4/Swarikar_website/partner/bg-m.webp?updatedAt=1785011177966"
           alt="Become a Swarikaro Partner "
           aria-hidden="true"
           className="w-full h-full"
@@ -93,19 +93,7 @@ export function Hero() {
   initial={{ opacity: 0, y: 30 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.7, delay: 0.32 }}
-  className="
-    max-w-[720px]
-    text-4xl
-    sm:text-5xl
-    lg:text-5xl
-    xl:text-5xl
-    font-bold 
-    mt-10
-    leading-[1.08]
-    tracking-tight
-    text-white
-    mb-6
-  "
+   className="max-w-[720px] text-4xl sm:text-5xl lg:text-5xl xl:text-5xl font-bold mt-10 leading-[1.08] tracking-tight text-white mb-6"
 >
   Turn Your Vehicle Into{" "}
   <span

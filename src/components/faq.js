@@ -71,7 +71,7 @@ export default function FAQ() {
               </div>
 
               <Image
-                src="/faq/faq_boy.webp"
+                src="https://ik.imagekit.io/swarikaro4/Swarikar_website/faq/faq_boy.webp?updatedAt=1785008441431"
                 alt="Swarikaro FAQ – Vehicle Rental Platform in India | Rent Bikes, Cars & More"
                 width={520}
                 height={560}

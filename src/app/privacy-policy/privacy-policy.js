@@ -172,19 +172,13 @@ const policySections = [
 export default function PrivacyPolicy() {
   return (
     <section
-      className="
-    
-    relative  hero-wrapper overflow-hidden  !py-16 lg:!py-20
-  "
+      className="relative hero-wrapper overflow-hidden !py-16 lg:!py-20"
     >
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       <div className="container mx-auto px-4 lg:px-8">
         <section
-          className="
-    
-    relative    overflow-hidden  
-  "
+          className="relative overflow-hidden"
         >
 
           <div className="grid items-center gap-8 p-5 sm:p-6 lg:grid-cols-2 lg:p-10">
@@ -238,16 +232,7 @@ export default function PrivacyPolicy() {
         </section>
 
         <section
-          className="
-relative
-overflow-hidden
-mt-8
-grid
-gap-6
-grid-cols-1
-md:grid-cols-2
-xl:grid-cols-3
-"
+          className="relative overflow-hidden mt-8 grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
         >
           <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
           {policySections.map((section) => {

@@ -249,7 +249,7 @@ Our mission is to make vehicle rentals simple, transparent, and available wherev
 
             <div className="relative w-full" style={{ paddingBottom: "105%" }}>
               <Image
-                src="/map_real.webp"
+                src="https://ik.imagekit.io/swarikaro4/Swarikar_website/ourpresence/map_real.webp?updatedAt=1785008304988"
                 alt="Self Drive Vehicle Rental"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

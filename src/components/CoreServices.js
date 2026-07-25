@@ -17,6 +17,7 @@ import {
   UsersRound,
 
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 
 
@@ -53,29 +54,29 @@ const trustItems = [
 function FeatureChip({ icon: Icon, text }) {
   return (
     <div
-      className="
-        group
-        flex items-center gap-3
-        rounded-2xl
-        border border-transparent
-        bg-white
-        px-4 py-3
-        shadow-soft
-        transition-all duration-200
-        hover:border-orange-300
-      "
+      className={cn(
+        "group",
+        "flex items-center gap-3",
+        "rounded-2xl",
+        "border border-transparent",
+        "bg-white",
+        "px-4 py-3",
+        "shadow-soft",
+        "transition-all duration-200",
+        "hover:border-orange-300",
+      )}
     >
       <span
-        className="
-          flex h-7 w-7 shrink-0
-          items-center justify-center
-          rounded-full
-          bg-[#fff3e8]
-          text-[#f97316]
-          transition-all duration-200
-          group-hover:bg-[#f97316]
-          group-hover:text-white
-        "
+        className={cn(
+          "flex h-7 w-7 shrink-0",
+          "items-center justify-center",
+          "rounded-full",
+          "bg-[#fff3e8]",
+          "text-[#f97316]",
+          "transition-all duration-200",
+          "group-hover:bg-[#f97316]",
+          "group-hover:text-white",
+        )}
       >
         <Icon className="h-4 w-4" strokeWidth={2} />
       </span>
@@ -122,7 +123,7 @@ export default function CoreServices() {
           <article className="group relative isolate overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-premium">
             <div className="relative h-44 lg:h-48 overflow-hidden">
               <img
-                   src="/core/rental.webp"
+                   src="https://ik.imagekit.io/swarikaro4/Swarikar_website/core/rental.webp?updatedAt=1785008440948"
                 alt="Rental vehicle service"
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -206,7 +207,7 @@ export default function CoreServices() {
           {/* More Services */}
           <article className="group relative isolate overflow-hidden rounded-3xl shadow-card ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-premium">
             <img
-             src="/core/more.webp"
+             src="https://ik.imagekit.io/swarikaro4/Swarikar_website/core/more.webp?updatedAt=1785008441118"
               alt="More services coming soon"
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"

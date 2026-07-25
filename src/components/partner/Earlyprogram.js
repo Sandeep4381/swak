@@ -47,9 +47,9 @@ export function Earlyprogram() {
             </p>
 
              <button
-        type="submit"
-        disabled={status === "loading"}
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-6 py-4 font-bold text-white shadow-premium transition hover:-translate-y-0.5 hover:bg-orange-500 hover:text-white disabled:cursor-not-allowed disabled:opacity-70"
+        type="button"
+        onClick={() => document.getElementById("partner-interest")?.scrollIntoView({ behavior: "smooth" })}
+        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-6 py-4 font-bold text-white shadow-premium transition hover:-translate-y-0.5 hover:bg-orange-500 hover:text-white"
       >
               Claim early partner benefits
               <ArrowRight className="h-5 w-5" />

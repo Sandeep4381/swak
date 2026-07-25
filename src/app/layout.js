@@ -10,8 +10,8 @@ import {
 } from "@/components/seo/structured-data";
 import Footer from "@/components/ui/Footer";
 import Navbar from "@/components/ui/Navbar";
-import PageLoader from "@/components/ui/PageLoader";
-import SplashProvider from "@/components/ui/SplashProvider";
+// import PageLoader from "@/components/ui/PageLoader";
+// import SplashProvider from "@/components/ui/SplashProvider";
 import {
   OG_IMAGE_URL,
   SITE_DESCRIPTION,
@@ -31,7 +31,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Swarikaro Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+    default: "Swarikaro - Vehicle Rental Platform in India | Rent Bikes, Cars & More",
    
   },
 
@@ -45,16 +45,19 @@ export const metadata = {
 
 icons: {
   icon: [
-
-    { url: "/favicon-16x16.ico", sizes: "16x16", type: "ico" },
-    { url: "/favicon-32x32.ico", sizes: "32x32", type: "ico" },
-    { url: "/icon.png", sizes: "192x192", type: "image/png" },
-    { url: "/icon.png", sizes: "512x512", type: "image/png" },
-
+    { url: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.ico", sizes: "16x16", type: "image/x-icon" },
+    { url: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+    { url: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.svg", sizes: "16x16", type: "image/svg+xml" },
+    { url: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.svg", sizes: "32x32", type: "image/svg+xml" },
   ],
-
-  shortcut: "/favicon.ico",
+  shortcut: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.ico",
   apple: "/apple-touch-icon.png",
+  other: [
+    {
+      rel: "apple-touch-icon-precomposed",
+      url: "/apple-touch-icon.png",
+    },
+  ],
   other: [
     {
       rel: "apple-touch-icon-precomposed",
@@ -63,7 +66,7 @@ icons: {
   ],
 },
   openGraph: {
-    title: "Swarikaro Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+    title: "Swarikaro - Vehicle Rental Platform in India | Rent Bikes, Cars & More",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -80,7 +83,7 @@ icons: {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Swarikaro Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+    title: "Swarikaro - Vehicle Rental Platform in India | Rent Bikes, Cars & More",
     description: SITE_DESCRIPTION,
     images: [OG_IMAGE_URL],
   },
@@ -117,7 +120,7 @@ export default function RootLayout({ children }) {
   ];
 
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-9ZHSK1059R"
@@ -132,10 +135,8 @@ export default function RootLayout({ children }) {
           `}
         </Script>
         <JsonLd data={siteSchemas} />
-        <PageLoader />
         <Navbar />
-
-        <SplashProvider>{children}</SplashProvider>
+{children}
         <Footer />
       </body>
     </html>

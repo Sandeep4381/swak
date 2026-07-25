@@ -120,7 +120,7 @@ function AppCard({ title, tone = "user" }) {
           className="min-w-0"
         >
           <Image
-            src="/footer/gplay.png"
+            src="https://ik.imagekit.io/swarikaro4/Swarikar_website/footer/gplay.png?updatedAt=1785008407113"
             alt="Swarikaro App"
             width={150}
             height={45}
@@ -134,7 +134,7 @@ function AppCard({ title, tone = "user" }) {
           className="min-w-0"
         >
           <Image
-            src="/footer/app-store-badge.svg"
+            src="https://ik.imagekit.io/swarikaro4/Swarikar_website/footer/app-store-badge.svg?updatedAt=1785008406982"
             alt="Swarikaro App"
             width={150}
             height={45}

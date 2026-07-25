@@ -40,7 +40,7 @@ const isPartnerPage = pathname === "/swarikaro-partner";
         <Image
           src="/logo.svg"
           alt="Swarikaro App"
-          width={160}
+          width={100}
           height={60}
           priority
          className="h-10 lg:h-12 xl:h-14 w-auto object-contain transition-all duration-300"

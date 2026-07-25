@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import {
   CalendarDays,
   Car,
@@ -38,10 +39,9 @@ const benefits = [
 export default function WhySwarikaro() {
   return (
     <section
-      className="
-   
-    relative overflow-hidden hero-wrapper  !py-16 lg:!py-18
-  "
+      className={cn(
+    "relative", "overflow-hidden", "hero-wrapper", "!py-16", "lg:!py-18",
+  )}
     >
 
       {/* Background Blur */}
@@ -135,19 +135,18 @@ export default function WhySwarikaro() {
             {/* Main Image */}
 
             <Image
-              src="/whySwarikaro/why.webp"
-              alt="Rent bike near me "
+              src="https://ik.imagekit.io/swarikaro4/Swarikar_website/home/why.webp?updatedAt=1785009827846"
+              alt="Swarikaro | About Swarikaro vehicle rental platform"
               width={720}
               height={720}
               priority
-              className="
-      w-full
-      max-w-[420px]
-      xl:max-w-[560px]
-      2xl:max-w-[650px]
-      object-contain
-      
-    "
+              className={cn(
+      "w-full",
+      "max-w-[420px]",
+      "xl:max-w-[560px]",
+      "2xl:max-w-[650px]",
+      "object-contain",
+    )}
             />
 
           </div>
@@ -155,21 +154,18 @@ export default function WhySwarikaro() {
           {/* RIGHT CONTENT */}
 
           <div
-            className="
-    w-full
-    self-start
-    mt-0
-    lg:mt-2
-
-    flex
-    flex-col
-
-    items-center
-    text-center
-
-    lg:items-start
-    lg:text-left
-  "
+            className={cn(
+    "w-full",
+    "self-start",
+    "mt-0",
+    "lg:mt-2",
+    "flex",
+    "flex-col",
+    "items-center",
+    "text-center",
+    "lg:items-start",
+    "lg:text-left",
+  )}
           >
  <div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
             <span className="h-px w-16  bg-orange-500" />
@@ -194,14 +190,14 @@ export default function WhySwarikaro() {
             </p>
 
             <div
-              className="
-    mt-8
-    grid
-    grid-cols-2
-    sm:grid-cols-4
-    gap-6
-    sm:gap-0
-  "
+              className={cn(
+    "mt-8",
+    "grid",
+    "grid-cols-2",
+    "sm:grid-cols-4",
+    "gap-6",
+    "sm:gap-0",
+  )}
             >
 
               {benefits.map((item, index) => {

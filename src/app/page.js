@@ -19,7 +19,7 @@ import WhySwarikaro from "@/components/WhySwarikaro";
 
 export const metadata = {
  title: {
-  default: "Swarikaro – Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+  default: "Swarikaro Vehicle Rental Platform in India | Rent Bikes, Cars & More",
   template: `%s | ${SITE_NAME}`,
 },
 
@@ -54,7 +54,7 @@ alternates: {
 },
   openGraph: {
     title: {
-      default: "Swarikaro – Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+      default: "Swarikar  Vehicle Rental Platform in India | Rent Bikes, Cars & More",
       template: `%s | ${SITE_NAME}`,
     },
     description: SITE_DESCRIPTION,
@@ -65,7 +65,7 @@ alternates: {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Swarikaro-Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+        alt: "Swarikaro - Vehicle Rental Platform in India | Rent Bikes, Cars & More",
       },
     ],
     locale: "en_IN",
@@ -74,7 +74,7 @@ alternates: {
   twitter: {
     card: "summary_large_image",
     title: {
-      default: "Swarikaro – Vehicle Rental Platform in India | Rent Bikes, Cars & More",
+      default: "Swarikaro - Vehicle Rental Platform in India | Rent Bikes, Cars & More",
       template: `%s | ${SITE_NAME}`,
     },
     description: SITE_DESCRIPTION,

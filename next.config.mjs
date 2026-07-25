@@ -16,7 +16,7 @@ const securityHeaders = [
   {
     key: "Content-Security-Policy",
     value:
-      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-ancestors 'none'; form-action 'self'",
+      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://ik.imagekit.io; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-ancestors 'none'; form-action 'self'",
   },
   {
     key: "Referrer-Policy",
@@ -30,13 +30,35 @@ const securityHeaders = [
 
 const nextConfig = {
   reactCompiler: true,
+   poweredByHeader: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ik.imagekit.io",
+      },
+    ],
+  },
 
   ...(process.env.NODE_ENV === "development" && {
     allowedDevOrigins: [
       "http://10.242.96.246:3000",
       "http://localhost:3000",
     ],
+    allowedDevOrigins: [
+      "http://10.242.96.246:3000",
+      "http://localhost:3000",
+    ],
   }),
+
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: securityHeaders,
+      },
+    ];
+  },
 
   async headers() {
     return [

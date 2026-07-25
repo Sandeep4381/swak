@@ -3,15 +3,22 @@
 import { PartnerInterestForm } from "@/components/partner/form_partner";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 import { MapPin, ChevronRight, Menu, X, ArrowRight, Navigation, Clock, Users, Car, Download } from "lucide-react";
 import ComingSoonButton from "./ui/comingsoon";
 
 /* ─── City images that cycle inside the phone ─── */
 const phoneImages = [
+<<<<<<< HEAD
+  "https://ik.imagekit.io/swarikaro4/Swarikar_website/home/hero_1.jpg?updatedAt=1785009827651",
+  "https://ik.imagekit.io/swarikaro4/Swarikar_website/home/hero_2.jpg?updatedAt=1785009827548",
+  "https://ik.imagekit.io/swarikaro4/Swarikar_website/home/hero_3.jpg?updatedAt=1785009827548",
+=======
   "/hero/hero_1.jpg",
   "/hero/hero_2.jpg",
   "/hero/hero_3.jpg",
+>>>>>>> 345955928cfd484754e62b254a50b3dc8f8bf504
 ];
 
 const stats = [
@@ -75,49 +82,44 @@ export default function App() {
 
 
       {/* ── Hero ── */}
-    <section
-  className="
-    relative
-    hero-wrapper
-    overflow-hidden
-    !pt-16
-    !pb-6
-    lg:!pt-20
-    lg:!pb-8
-  "
+      <section
+    className={cn(
+    "relative",
+    "hero-wrapper",
+    "overflow-hidden",
+    "!pt-16",
+    "!pb-6",
+    "lg:!pt-20",
+    "lg:!pb-8",
+  )}
 >
        <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
         <div
-          className="
-    hero-wrapper
-    max-w-[1700px]
-    mx-auto
-    px-[5vw]
-    grid
-    lg:grid-cols-[3fr_2fr]
-   
-    gap-8
-    lg:gap-8
-    items-start
-    lg:items-center
-  "
+          className={cn(
+    "hero-wrapper",
+    "max-w-[1700px]",
+    "mx-auto",
+    "px-[5vw]",
+    "grid",
+    "lg:grid-cols-[3fr_2fr]",
+    "gap-8",
+    "lg:gap-8",
+    "items-start",
+    "lg:items-center",
+  )}
         >
           {/* Left */}
           <div
-            className="
-    flex
-    flex-col
-    justify-center
-    items-center
-    text-center
-
-    lg:items-start
-    lg:text-left
-
-
-
-  "
+            className={cn(
+    "flex",
+    "flex-col",
+    "justify-center",
+    "items-center",
+    "text-center",
+    "lg:items-start",
+    "lg:text-left",
+  )}
           >
 
 
@@ -125,15 +127,13 @@ export default function App() {
 
             {/* Headline */}
             <h1
-              className="
-    font-bold
-    leading-[1.09]
-  
-    text-[#29566A]
-    mt-4
-    
-     text-[clamp(2rem,4vw,5.2rem)]
-  "
+              className={cn(
+    "font-bold",
+    "leading-[1.09]",
+    "text-[#29566A]",
+    "mt-4",
+    "text-[clamp(2rem,4vw,5.2rem)]",
+  )}
             >
               Find the Right Vehicle,
               <br />
@@ -272,6 +272,9 @@ export default function App() {
                     />
                   </div>
 
+                  {/* Preload the hero image shown first */}
+                  <link rel="preload" href={phoneImages[0]} as="image" />
+
                   {/* Cycling city bg images */}
                   {phoneImages.map((src, i) => (
                     <img
@@ -280,6 +283,8 @@ export default function App() {
                       alt="Swarikaro Self Drive Vehicle Rental"
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
                       style={{ opacity: phoneImg === i ? 0.45 : 0 }}
+                      fetchPriority={i === 0 ? "high" : "low"}
+                      loading={i === 0 ? "eager" : "lazy"}
                     />
                   ))}
 

@@ -26,10 +26,7 @@ export default function AboutContent() {
       {/* Hero Section */}
     {/* Hero Section */}
       <section
-        className="
-    
-    relative   hero-wrapper overflow-hidden  !py-16 lg:!py-20
-  "
+        className="relative hero-wrapper overflow-hidden !py-16 lg:!py-20"
       >
         <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
@@ -42,22 +39,7 @@ export default function AboutContent() {
 
 
               <h1
-                className="
-    max-w-[720px]
-    text-4xl
-    sm:text-5xl
-    lg:text-5xl
-    xl:text-5xl
-    font-bold
-    leading-[1.08]
-    tracking-tight
-    text-[#29566A]
-    mb-6
-    text-center
-    lg:text-left
-    mx-auto
-    lg:mx-0
-  "
+                className="max-w-[720px] text-4xl sm:text-5xl lg:text-5xl xl:text-5xl font-bold leading-[1.08] tracking-tight text-[#29566A] mb-6 text-center lg:text-left mx-auto lg:mx-0"
               >
                Building India's Smart 
                 <br />
@@ -104,7 +86,7 @@ export default function AboutContent() {
 
                 {/* Hero Image */}
                 <Image
-                  src="/about/about_hero.webp"
+                  src="https://ik.imagekit.io/swarikaro4/Swarikar_website/about/about_hero.webp?updatedAt=1785008103865"
                   alt="About Swarikaro vehicle rental platform"
                   width={900}
                   height={750}
@@ -120,15 +102,7 @@ export default function AboutContent() {
 
                 {/* Card 1 */}
                 <div
-                  className="
-    group
-    flex h-[140px] flex-col items-center justify-center
-    rounded-2xl border border-orange-100 bg-white
-    px-3 py-3 text-center shadow-sm
-    transition-all duration-300
-    hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg
-    active:scale-95 active:border-orange-300 active:shadow-lg
-  "
+                  className="group flex h-[140px] flex-col items-center justify-center rounded-2xl border border-orange-100 bg-white px-3 py-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg active:scale-95 active:border-orange-300 active:shadow-lg"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-50 transition-all duration-300 group-hover:scale-110 group-hover:bg-orange-500">
                     <Users
@@ -150,15 +124,7 @@ export default function AboutContent() {
 
                 {/* Card 2 */}
                 <div
-                  className="
-    group
-    flex h-[140px] flex-col items-center justify-center
-    rounded-2xl border border-orange-100 bg-white
-    px-3 py-3 text-center shadow-sm
-    transition-all duration-300
-    hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg
-    active:scale-95 active:border-orange-300 active:shadow-lg
-  "
+                  className="group flex h-[140px] flex-col items-center justify-center rounded-2xl border border-orange-100 bg-white px-3 py-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg active:scale-95 active:border-orange-300 active:shadow-lg"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-50 transition-all duration-300 group-hover:scale-110 group-hover:bg-orange-500">
                     <ShieldCheck
@@ -180,15 +146,7 @@ export default function AboutContent() {
 
                 {/* Card 3 */}
                 <div
-                  className="
-    group
-    flex h-[140px] flex-col items-center justify-center
-    rounded-2xl border border-orange-100 bg-white
-    px-3 py-3 text-center shadow-sm
-    transition-all duration-300
-    hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg
-    active:scale-95 active:border-orange-300 active:shadow-lg
-  "
+                  className="group flex h-[140px] flex-col items-center justify-center rounded-2xl border border-orange-100 bg-white px-3 py-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg active:scale-95 active:border-orange-300 active:shadow-lg"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-50 transition-all duration-300 group-hover:scale-110 group-hover:bg-orange-500">
                     <IndianRupee
@@ -210,15 +168,7 @@ export default function AboutContent() {
 
                 {/* Card 4 */}
                 <div
-                  className="
-    group
-    flex h-[140px] flex-col items-center justify-center
-    rounded-2xl border border-orange-100 bg-white
-    px-3 py-3 text-center shadow-sm
-    transition-all duration-300
-    hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg
-    active:scale-95 active:border-orange-300 active:shadow-lg
-  "
+                  className="group flex h-[140px] flex-col items-center justify-center rounded-2xl border border-orange-100 bg-white px-3 py-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg active:scale-95 active:border-orange-300 active:shadow-lg"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-50 transition-all duration-300 group-hover:scale-110 group-hover:bg-orange-500">
                     <Headphones
@@ -252,10 +202,7 @@ export default function AboutContent() {
       {/* ================= OUR STORY ================= */}
 
       <section
-        className="
-   
-    relative overflow-hidden hero-wrapper  !py-16 lg:!py-20
-  "
+        className="relative overflow-hidden hero-wrapper !py-16 lg:!py-20"
       >
 
         <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
@@ -297,7 +244,7 @@ export default function AboutContent() {
             <div className="relative">
               <div className="overflow-hidden rounded-[20px]">
                 <Image
-                  src="/about/story.webp"
+                  src="https://ik.imagekit.io/swarikaro4/Swarikar_website/about/story.webp?updatedAt=1785008103749"
                   alt="India's vehicle rental platform"
                   width={900}
                   height={700}
@@ -347,10 +294,7 @@ export default function AboutContent() {
       {/* ================= WHAT WE DO ================= */}
 
       <section
-      className="
-   
-    relative overflow-hidden hero-wrapper  !py-16 lg:!py-18
-  "
+      className="relative overflow-hidden hero-wrapper !py-16 lg:!py-18"
     >
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
@@ -387,7 +331,7 @@ export default function AboutContent() {
             <div className="group overflow-hidden rounded-[20px] border border-orange-100 bg-[#FFF8F1] shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
               <Image
-                src="/about/about_1.webp"
+                src="https://ik.imagekit.io/swarikaro4/Swarikar_website/about/about_1.webp?updatedAt=1785008103682"
                 alt="Earn money by renting your vehicle"
                 width={600}
                 height={400}
@@ -417,7 +361,7 @@ Turn your idle bikes, scooters, cars, and other vehicles into additional income 
             <div className="group overflow-hidden rounded-[28px] border border-orange-100 bg-[#FFF8F1] shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
               <Image
-                src="/about/about_2.webp"
+                src="https://ik.imagekit.io/swarikaro4/Swarikar_website/about/about_2.webp?updatedAt=1785008103800"
                 alt="Digital platform for vehicle rental businesses"
                 width={600}
                 height={400}
@@ -447,7 +391,7 @@ Turn your idle bikes, scooters, cars, and other vehicles into additional income 
             <div className="group overflow-hidden rounded-[28px] border border-orange-100 bg-[#FFF8F1] shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
               <Image
-                src="/about/about_4.webp"
+                src="https://ik.imagekit.io/swarikaro4/Swarikar_website/about/about_4.webp?updatedAt=1785008103853"
                 alt="Earn money by renting your vehicle"
                 width={600}
                 height={400}

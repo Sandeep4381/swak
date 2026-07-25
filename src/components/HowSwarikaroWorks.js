@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import Image from "next/image";
-const mapIllustration = "/howSwarikaro/image-3.png";
+const mapIllustration = "https://ik.imagekit.io/swarikaro4/Swarikar_website/howSwarikaro/image-3.png?updatedAt=1785008498857";
 
 <Image
   src={mapIllustration}
@@ -127,16 +127,7 @@ const sectionRef = useRef(null);
           {/* Left — illustration */}
           <div className="flex items-center justify-center lg:sticky lg:top-24 self-start">
   <div
-    className="
-      relative
-      w-full
-      max-w-md
-      lg:max-w-lg
-      xl:max-w-xl
-      h-[400px]
-      lg:h-[440px]
-      xl:h-[520px]
-    "
+    className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl h-[400px] lg:h-[440px] xl:h-[520px]"
   >
               {/* glow */}
               <div

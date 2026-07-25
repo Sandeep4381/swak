@@ -241,10 +241,7 @@ const terms = [
 export default function TermsContent() {
   return (
      <section
-        className="
-    
-    relative   hero-wrapper  overflow-hidden  !py-16 lg:!py-20
-  "
+        className="relative hero-wrapper overflow-hidden !py-16 lg:!py-20"
       >
  <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
@@ -253,10 +250,7 @@ export default function TermsContent() {
         {/* Hero */}
 
 <section
-        className="
-    
-    relative  overflow-hidden 
-  "
+        className="relative overflow-hidden"
       >
 
         <div className="mx-auto max-w-4xl px-4  text-center">
