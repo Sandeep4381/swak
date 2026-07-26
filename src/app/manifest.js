@@ -6,18 +6,27 @@ export default function manifest() {
     short_name: SITE_NAME,
     description: SITE_DESCRIPTION,
     start_url: "/",
+    scope: "/",
     display: "standalone",
+    orientation: "portrait",
     background_color: "#ffffff",
     theme_color: "#F97316",
+
     icons: [
       {
         src: "/favicon.ico",
-        sizes: "16x16 32x32",
+        sizes: "any",
         type: "image/x-icon",
       },
       {
+        src: "/icon.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
         src: "/favicon.svg",
-        sizes: "16x16 32x32",
+        sizes: "any",
         type: "image/svg+xml",
       },
       {

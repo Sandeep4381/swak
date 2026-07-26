@@ -17,7 +17,7 @@ export const metadata = {
     "Become a Swarikaro Partner and grow your vehicle rental business. List bikes, scooters, cars, and fleets, manage bookings, track earnings, and connect with customers through the Swarikaro Partner App.",
   metadataBase: new URL(SITE_URL),
     keywords: [
-    "About Swarikaro",
+    "Partner Swarikaro",
     "Vehicle Rental Platform",
     "Car Rental",
     "Bike Rental",

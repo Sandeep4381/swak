@@ -10,8 +10,7 @@ import {
 } from "@/components/seo/structured-data";
 import Footer from "@/components/ui/Footer";
 import Navbar from "@/components/ui/Navbar";
-// import PageLoader from "@/components/ui/PageLoader";
-// import SplashProvider from "@/components/ui/SplashProvider";
+
 import {
   OG_IMAGE_URL,
   SITE_DESCRIPTION,
@@ -43,28 +42,37 @@ export const metadata = {
     canonical: SITE_URL,
   },
 
+manifest: "/site.webmanifest",
+
 icons: {
   icon: [
-    { url: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.ico", sizes: "16x16", type: "image/x-icon" },
-    { url: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-    { url: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.svg", sizes: "16x16", type: "image/svg+xml" },
-    { url: "https://ik.imagekit.io/swarikaro4/Swarikar_website/icon/favicon.svg", sizes: "32x32", type: "image/svg+xml" },
+    {
+      url: "/favicon.ico",
+      type: "image/x-icon",
+    },
+    {
+      url: "/favicon.svg",
+      type: "image/svg+xml",
+    },
+    {
+      url: "/favicon-96x96.png",
+      sizes: "96x96",
+      type: "image/png",
+    },
+    {
+      url: "/icon.png",
+      sizes: "512x512",
+      type: "image/png",
+    },
   ],
+
 
   shortcut: "/favicon.ico",
 
-
-  apple: "/apple-touch-icon.png",
-  other: [
+  apple: [
     {
-      rel: "apple-touch-icon-precomposed",
       url: "/apple-touch-icon.png",
-    },
-  ],
-  other: [
-    {
-      rel: "apple-touch-icon-precomposed",
-      url: "/apple-touch-icon.png",
+      sizes: "180x180",
     },
   ],
 },
@@ -126,6 +134,7 @@ export default function RootLayout({ children }) {
     <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable}`}>
 
       <head>
+    
         <link rel="preconnect" href="https://ik.imagekit.io" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
