@@ -43,38 +43,20 @@ export const metadata = {
   },
 
 manifest: "/site.webmanifest",
-
 icons: {
   icon: [
-    {
-      url: "/favicon.ico",
-      type: "image/x-icon",
-    },
     {
       url: "/favicon.svg",
       type: "image/svg+xml",
     },
     {
-      url: "/favicon-96x96.png",
-      sizes: "96x96",
-      type: "image/png",
-    },
-    {
-      url: "/icon.png",
-      sizes: "512x512",
-      type: "image/png",
+      url: "/favicon.ico",
+      type: "image/x-icon",
+
     },
   ],
-
-
   shortcut: "/favicon.ico",
-
-  apple: [
-    {
-      url: "/apple-touch-icon.png",
-      sizes: "180x180",
-    },
-  ],
+  apple: "/apple-touch-icon.png",
 },
   openGraph: {
     title: "Swarikaro - Vehicle Rental Platform in India | Rent Bikes, Cars & More",
