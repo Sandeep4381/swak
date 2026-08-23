@@ -1,0 +1,58 @@
+[
+  {
+    "id": "travel-guides",
+    "name": "Travel Guides",
+    "slug": "travel-guides",
+    "description": "Complete travel guides, itineraries and practical tips for exploring Himachal Pradesh.",
+    "icon": "Map"
+  },
+  {
+    "id": "destinations",
+    "name": "Destinations",
+    "slug": "destinations",
+    "description": "Stories and inspiration from the most beautiful destinations in the Himalayas.",
+    "icon": "Mountain"
+  },
+  {
+    "id": "things-to-do",
+    "name": "Things To Do",
+    "slug": "things-to-do",
+    "description": "Handpicked experiences and activities worth adding to your travel plan.",
+    "icon": "Compass"
+  },
+  {
+    "id": "adventure",
+    "name": "Adventure",
+    "slug": "adventure",
+    "description": "Trekking, rafting, paragliding and every adrenaline rush in the mountains.",
+    "icon": "Zap"
+  },
+  {
+    "id": "travel-tips",
+    "name": "Travel Tips",
+    "slug": "travel-tips",
+    "description": "Packing lists, permits, budgets and practical advice for mountain travel.",
+    "icon": "Lightbulb"
+  },
+  {
+    "id": "attractions",
+    "name": "Attractions",
+    "slug": "attractions",
+    "description": "Temples, passes, lakes and landmarks you should not miss.",
+    "icon": "Camera"
+  },
+  {
+    "id": "road-trips",
+    "name": "Road Trips",
+    "slug": "road-trips",
+    "description": "Scenic routes, mountain roads and epic journeys across the hills.",
+    "icon": "Car"
+  },
+  {
+    "id": "food-culture",
+    "name": "Food & Culture",
+    "slug": "food-culture",
+    "description": "Local food, festivals, cafes and the culture of the mountains.",
+    "icon": "Utensils"
+  }
+]

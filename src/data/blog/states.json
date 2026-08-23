@@ -1,0 +1,23 @@
+[
+  {
+    "id": "himachal-pradesh",
+    "name": "Himachal Pradesh",
+    "slug": "himachal-pradesh",
+    "description": "Explore the best travel guides, hidden gems, attractions and travel stories from Himachal Pradesh.",
+    "hero": {
+      "title": "Blogs in Himachal Pradesh",
+      "subtitle": "Explore the best travel guides, hidden gems, attractions and travel stories from Himachal Pradesh.",
+      "badge": "HIMACHAL PRADESH"
+    },
+    "intro": {
+      "title": "Explore Himachal Pradesh",
+      "text": "From snow-covered mountains and peaceful valleys to adventure destinations and charming hill towns, discover travel inspiration for your Himachal journey."
+    },
+    "popularCities": [
+      "manali",
+      "shimla",
+      "dharamshala"
+      
+    ]
+  }
+]

@@ -5,7 +5,7 @@ This document defines the Git workflow for the **Swarikaro Website**. Every deve
 ---
 
 # Repository
-
+git remote -v
 **GitHub Repository Production**
 
 ```

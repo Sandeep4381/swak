@@ -31,6 +31,7 @@ const exploreLinks = [
   { label: "Contact", href: "/contact", icon: Mail },
   { label: "Privacy Policy", href: "/privacy-policy", icon: ShieldCheck },
   { label: "Terms & Conditions", href: "/terms-and-condition", icon: FileText },
+   { label: "Blogs", href: "/blog", icon: FileText },
 ];
 
 const socialLinks = [
@@ -180,7 +181,7 @@ export default function Footer() {
                 className="flex justify-center md:inline-flex md:justify-start"
               >
                 <Image
-                  src="/logo.png"
+                  src="/white-logo.png"
                   alt="Swarikaro App"
                   width={200}
                   height={70}

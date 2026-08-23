@@ -492,3 +492,61 @@ width:180px;
 }
 
 }
+
+/* ==============================
+   PRINT — Save Guide as PDF
+   Hides nav/hero/footer and prints
+   only the article content + images.
+================================ */
+@media print {
+  header,
+  footer,
+  nav,
+  aside,
+  .hero-bg > *:not(main),
+  section:has(> .coming-soon-popup),
+  #coming-soon-title,
+  button,
+  iframe {
+    display: none !important;
+  }
+
+  /* Only the article area prints */
+  main,
+  article {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #123149 !important;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  article img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+    border-radius: 8px;
+  }
+
+  article section {
+    page-break-inside: avoid;
+  }
+
+  article h1,
+  article h2,
+  article h3 {
+    color: #29566a !important;
+    page-break-after: avoid;
+  }
+
+  .shadow-soft,
+  .shadow-card {
+    box-shadow: none !important;
+    border-color: #e5e7eb !important;
+  }
+}

@@ -1,6 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function NotFound() {
+	// Mark the page as an error page so the Navbar shows readable dark text.
+	useEffect(() => {
+		document.body.dataset.errorPage = "true";
+		return () => {
+			delete document.body.dataset.errorPage;
+		};
+	}, []);
+
 	return (
 		<main
 			style={{

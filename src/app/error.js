@@ -1,6 +1,17 @@
 "use client";
 
+import { useEffect } from "react";
+
 export default function Error({ reset }) {
+	// Mark the page as an error page so the Navbar can show readable text
+	// (error pages have a light background; no dark-hero white text).
+	useEffect(() => {
+		document.body.dataset.errorPage = "true";
+		return () => {
+			delete document.body.dataset.errorPage;
+		};
+	}, []);
+
 	return (
 		<main
 			style={{
