@@ -1,5 +1,12 @@
 import type { CityData } from "@/types/city";
-import { company } from "@/data/shared/company";
+import { SITE_NAME, SITE_URL } from "@/lib/metadata";
+
+const company = {
+  name: SITE_NAME,
+  url: SITE_URL,
+  email: "support@swarikaro.com",
+  phone: "+91-0000000000",
+};
 
 export function buildCityJsonLd(city: CityData) {
   const baseUrl = company.url;
