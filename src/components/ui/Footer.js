@@ -23,6 +23,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import ComingSoonButton from "./comingsoon";
+import { label } from "motion/react-client";
 
 const exploreLinks = [
   { label: "About Swarikaro", href: "/about", icon: UsersRound },
@@ -31,6 +32,10 @@ const exploreLinks = [
   { label: "Contact", href: "/contact", icon: Mail },
   { label: "Privacy Policy", href: "/privacy-policy", icon: ShieldCheck },
   { label: "Terms & Conditions", href: "/terms-and-condition", icon: FileText },
+  {label: "User App Terms of Use", href: "/swarikaro-user-app-terms-of-use", icon: FileText},
+  {label: "Partners App Terms of Use", href: "/swarikaro-partner-app-terms-of-use", icon: FileText},
+{label: "Partner App Privacy Policy", href: "/swarikaro-partner-app-privacy-policy", icon: ShieldCheck},
+{label: "User App Privacy Policy", href: "/swarikaro-user-app-privacy-policy", icon: ShieldCheck},
 ];
 
 const socialLinks = [
